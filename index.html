@@ -29,10 +29,21 @@
 </head>
 <body class="bg-gray-50 flex items-center justify-center min-h-screen py-8">
 
-    <div class="relative container max-w-5xl my-4 p-4 sm:p-6 md:p-8 bg-white shadow-xl">
+    <div class="relative container max-w-3xl my-4 p-4 sm:p-5 md:p-6 bg-white shadow-xl">
+
+        <img
+            src="apteczka/images/liscie-gora.png"
+            alt="Dekoracyjne liście"
+            class="absolute top-0 left-0 w-1/3 opacity-40 pointer-events-none"
+        >
 
         <!-- Header -->
         <header class="text-center mb-8 md:mb-12 relative z-10">
+            <img
+                src="apteczka/images/doterralogo.png"
+                alt="dōTERRA Logo"
+                class="mx-auto mb-6 w-48 md:w-56"
+            >
             <h1 class="text-4xl md:text-5xl font-semibold leading-tight text-slate-800 mb-2">
                 Oferty dōTERRA
             </h1>
@@ -46,7 +57,7 @@
             <div class="flex flex-col gap-6 max-w-2xl mx-auto">
 
                 <!-- November Card -->
-                <a href="november/" class="month-card block bg-white shadow-lg overflow-hidden">
+                <div class="month-card block bg-white shadow-lg overflow-hidden">
                     <div class="p-8">
                         <div class="mb-4">
                             <h3 class="text-2xl font-bold text-slate-800">Listopad</h3>
@@ -55,35 +66,35 @@
                             Zestaw Home Essentials<br>
                             <span class="text-sm text-slate-500">+ Promocja 200PV</span>
                         </p>
-                        <div>
-                            <span class="text-lg font-semibold text-[#a7c5a9]">Zobacz ofertę →</span>
+                        <div class="flex flex-col gap-2">
+                            <a href="november/" class="text-lg font-semibold text-[#a7c5a9] hover:underline">Zobacz ofertę →</a>
+                            <a href="november/?team=true" class="text-sm text-slate-500 hover:text-[#a7c5a9] hover:underline transition">Wybierz produkty</a>
                         </div>
                     </div>
-                </a>
+                </div>
 
                 <!-- Apteczka Card -->
-                <a href="apteczka/" class="month-card block bg-white shadow-lg overflow-hidden">
+                <div class="month-card block bg-white shadow-lg overflow-hidden">
                     <div class="p-8">
                         <div class="mb-4">
                             <h3 class="text-2xl font-bold text-slate-800">Apteczka</h3>
                         </div>
                         <p class="text-slate-600 mb-6">
-                            Zestaw Home Essentials<br>
-                            <span class="text-sm text-slate-500">Bez promocji 200PV</span>
+                            Zestaw Home Essentials
                         </p>
-                        <div>
-                            <span class="text-lg font-semibold text-[#a7c5a9]">Zobacz ofertę →</span>
+                        <div class="flex flex-col gap-2">
+                            <a href="apteczka/" class="text-lg font-semibold text-[#a7c5a9] hover:underline">Zobacz ofertę →</a>
+                            <a href="apteczka/?team=true" class="text-sm text-slate-500 hover:text-[#a7c5a9] hover:underline transition">Wybierz produkty</a>
                         </div>
                     </div>
-                </a>
+                </div>
 
             </div>
         </section>
 
         <!-- Footer -->
         <footer class="mt-12 pt-8 border-t border-gray-200 text-center text-slate-400 text-sm">
-            <p class="mb-2">Oferty specjalne dōTERRA • Dla nowych klientów</p>
-            <p class="text-xs">Emilia Chodorowska • Doradca dōTERRA</p>
+            <p class="text-xs">Emilia Chodorowska • dōTERRA Wellness Advocate</p>
         </footer>
 
     </div>
