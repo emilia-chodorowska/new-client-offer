@@ -14,6 +14,7 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
         }
 
         .month-card {
@@ -21,36 +22,27 @@
         }
 
         .month-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-4px);
             box-shadow: 0 20px 25px -5px rgba(167, 197, 169, 0.3), 0 10px 10px -5px rgba(167, 197, 169, 0.2);
-        }
-
-        .archive-link {
-            transition: all 0.2s ease;
-        }
-
-        .archive-link:hover {
-            color: #7a9d7e;
         }
     </style>
 </head>
-<body class="bg-gray-50 flex flex-col min-h-screen py-12 px-4">
+<body class="bg-gray-50 flex items-center justify-center min-h-screen py-8">
 
-    <div class="max-w-6xl mx-auto flex-grow">
+    <div class="relative container max-w-5xl my-4 p-4 sm:p-6 md:p-8 bg-white shadow-xl">
 
         <!-- Header -->
-        <header class="text-center mb-16">
-            <h1 class="text-5xl md:text-6xl font-bold text-slate-800 mb-4">
+        <header class="text-center mb-8 md:mb-12 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-semibold leading-tight text-slate-800 mb-2">
                 Oferty dōTERRA
             </h1>
-            <p class="text-xl md:text-2xl text-slate-600 font-light">
+            <p class="text-lg md:text-xl text-slate-600 font-light">
                 dla nowych klientów
             </p>
-            <div class="mt-6 w-32 h-1 bg-gradient-to-r from-[#a7c5a9] to-[#7a9d7e] mx-auto rounded-full"></div>
         </header>
 
         <!-- Current Offers Section -->
-        <section class="mb-16">
+        <section class="mb-8 relative z-10">
             <h2 class="text-3xl font-semibold text-slate-700 mb-8 text-center">
                 Aktualne oferty
             </h2>
@@ -93,13 +85,13 @@
             </div>
         </section>
 
-    </div>
+        <!-- Footer -->
+        <footer class="mt-12 pt-8 border-t border-gray-200 text-center text-slate-400 text-sm">
+            <p class="mb-2">Oferty specjalne dōTERRA • Dla nowych klientów</p>
+            <p class="text-xs">Emilia Chodorowska • Doradca dōTERRA</p>
+        </footer>
 
-    <!-- Footer -->
-    <footer class="mt-auto pt-16 pb-8 text-center text-slate-400 text-sm">
-        <p class="mb-2">Oferty specjalne dōTERRA • Dla nowych klientów</p>
-        <p class="text-xs">Emilia Chodorowska • Doradca dōTERRA</p>
-    </footer>
+    </div>
 
 </body>
 </html>
