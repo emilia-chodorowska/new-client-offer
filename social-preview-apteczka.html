@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Preview - Apteczka</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f9fafb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .preview-container {
+            width: 1280px;
+            height: 640px;
+            background: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+        }
+
+        .leaves {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 400px;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .logo {
+            width: 280px;
+            margin-bottom: 40px;
+        }
+
+        .title {
+            font-size: 72px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 32px;
+            color: #64748b;
+            font-weight: 400;
+        }
+
+        .accent {
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            font-size: 20px;
+            color: #a7c5a9;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <img
+            src="apteczka/images/liscie-gora.png"
+            alt="Dekoracyjne liście"
+            class="leaves"
+        >
+
+        <div class="content">
+            <img
+                src="apteczka/images/doterralogo.png"
+                alt="dōTERRA Logo"
+                class="logo"
+            >
+            <h1 class="title">Zestaw Home Essentials</h1>
+            <p class="subtitle">Kompletna apteczka naturalna</p>
+        </div>
+
+        <div class="accent">dōTERRA Wellness Advocate</div>
+    </div>
+</body>
+</html>
