@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apteczka dla nowej osoby – kwiecień 2026</title>
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kwiecień 2026 - Zestaw Home Essentials + Promocja 200PV">
+    <meta property="og:description" content="Zestaw Home Essentials dōTERRA z gratisami. Promocja 200PV - otrzymaj Wild Orange, Balance™ i 50 punktów produktowych.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kwiecień 2026 - Oferta dōTERRA">
+    <meta property="og:url" content="https://emilia-chodorowska.github.io/new-client-offer/kwiecien/">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kwiecień 2026 - Zestaw Home Essentials + Promocja 200PV">
+    <meta name="twitter:description" content="Zestaw Home Essentials dōTERRA z gratisami. Promocja 200PV - otrzymaj Wild Orange, Balance™ i 50 punktów produktowych.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --purple: #7E57C2;
+            --purple-soft: #F3EEFA;
+            --purple-dark: #4D2C91;
+            --green: #4CAF50;
+            --bg-soft: #F9FAFB;
+            --text: #111827;
+            --text-secondary: #6B7280;
+            --text-muted: #9CA3AF;
+            --border: #E5E7EB;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            background: var(--bg-soft);
+            overflow-x: hidden;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--purple);
+            background: var(--purple-soft);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            margin-bottom: 0.75rem;
+        }
+
+        .price-bubble {
+            position: absolute;
+            top: -2rem;
+            right: -2rem;
+        }
+
+        .strike-row {
+            position: relative;
+            color: #6b7280;
+        }
+        .strike-row::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #6b7280;
+            z-index: 10;
+        }
+
+        .points-badge {
+            background: linear-gradient(135deg, #E8F5E9, #cce2d3);
+            border: 2px solid #a7c5a9;
+            border-radius: 16px;
+            padding: 1rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 8rem;
+        }
+
+        @media (max-width: 768px) {
+            .price-bubble {
+                width: 8rem;
+                height: 8rem;
+                font-size: 1.25rem;
+                top: -1.5rem;
+                right: -1.5rem;
+            }
+
+            #calculation-table th,
+            #calculation-table td {
+                padding: 0.375rem 0.15rem !important;
+                font-size: 0.7rem;
+            }
+
+            #calculation-table thead th {
+                font-size: 0.6rem;
+                line-height: 1.05;
+                word-wrap: break-word;
+            }
+
+            .strike-toggle {
+                width: 1rem !important;
+                height: 1rem !important;
+            }
+
+            .strike-column input[type="text"] {
+                padding: 0.125rem !important;
+                font-size: 0.65rem;
+            }
+
+            .points-badge {
+                min-height: 6rem;
+                padding: 0.75rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen py-8">
+
+    <div id="main-container" class="relative container max-w-5xl my-4 p-4 sm:p-6 md:p-8 bg-white shadow-xl">
+
+        <img
+            src="images/liscie-gora.png"
+            alt="Dekoracyjne liście"
+            class="absolute top-0 left-0 w-1/3 opacity-40 pointer-events-none"
+        >
+
+
+        <header id="header-container" class="text-center mb-8 md:mb-12 relative z-10 p-2">
+            <div>
+                 <img
+                    src="../apteczka/images/doterralogo.png"
+                    alt="dōTERRA Logo"
+                    class="mx-auto mb-6 w-48 md:w-56"
+                 >
+                 <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-2" style="color: var(--text);">Kwiecień 2026</h1>
+                 <p class="text-lg md:text-xl font-light" style="color: var(--text-secondary);">Zestaw Home Essentials</p>
+            </div>
+        </header>
+
+        <main id="main-content-container" class="relative z-10 flex flex-col gap-8 p-2">
+
+            <div id="top-section" class="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
+                <div id="product-image-container" class="relative p-2 w-fit justify-self-center">
+                    <div id="main-image-container" class="bg-gray-50 p-3 rounded-xl shadow-inner">
+                        <img
+                            src="images/zestaw-olejkow.jpg"
+                            alt="Zestaw olejków dōTERRA Home Essentials"
+                            class="w-full rounded-lg shadow-md block"
+                        >
+                    </div>
+                    <div class="price-bubble font-bold text-xl md:text-2xl w-32 h-32 md:w-40 md:h-40 rounded-full flex items-center justify-center shadow-lg" style="background: #cce2d3; color: #1e293b;">
+                        1492,75zł
+                    </div>
+                </div>
+
+                <div id="right-column-container" class="flex items-center p-2">
+                    <div id="kit-contents-container" class="bg-white p-4 md:p-6 rounded-lg w-full h-fit border-2 border-[#a7c5a9]">
+                        <h3 class="text-center text-xl md:text-2xl font-semibold mb-4" style="color: var(--text);">Zestaw zawiera:</h3>
+                        <ul id="kit-list" class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-2 text-base md:text-lg" style="color: var(--text-secondary);">
+                            <li data-product-name="Lemon">Lemon</li>
+                            <li data-product-name="Lavender">Lavender</li>
+                            <li data-product-name="Frankincense">Frankincense</li>
+                            <li data-product-name="Peppermint">Peppermint</li>
+                            <li data-product-name="Oregano">Oregano</li>
+                            <li data-product-name="Tea Tree">Tea Tree</li>
+                            <li data-product-name="Air™">Air™</li>
+                            <li data-product-name="ZenGest™">ZenGest™</li>
+                            <li data-product-name="On Guard™">On Guard™</li>
+                            <li data-product-name="Deep Blue™">Deep Blue™</li>
+                            <li data-product-name="Petal™ Diffuser 2.0" class="lg:col-span-2">Petal™ Diffuser 2.0</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="promo-section-container" class="p-2">
+                <div id="promo-box-container" class="grid md:grid-cols-2 gap-6 md:gap-8 items-center pt-4">
+                    <div id="promo-text-container" class="p-1 text-center md:text-left" style="color: var(--text);">
+                         <h2 class="text-2xl md:text-3xl font-semibold leading-tight">Promocja 200PV:<br>DARMOWE produkty i punkty<br>o wartości łącznej ponad 400zł*</h2>
+                         <p class="text-xs mt-2" style="color: var(--text-muted);">*Złóż jedno zamówienie rejestracyjne na 200 PV lub więcej do 30 kwietnia 2026 r.</p>
+                    </div>
+                    <div class="flex justify-center">
+                        <div id="all-gratis-container" class="flex justify-center items-center p-2 gap-3 md:gap-5">
+                            <img src="images/olejek-gratis-1.png" alt="Wild Orange" class="h-32 md:h-40 object-contain">
+                            <img src="images/olejek-gratis-2.png" alt="Balance™" class="h-32 md:h-40 object-contain">
+                            <div class="points-badge aspect-square w-28 md:w-32 ml-2 md:ml-4 flex-shrink-0">
+                                <span class="text-2xl font-bold leading-none" style="color: #2E7D32;">50</span>
+                                <span class="text-[0.6rem] md:text-xs font-semibold mt-0.5 leading-tight" style="color: var(--text);">punktów</span>
+                                <span class="text-[0.6rem] md:text-xs font-semibold leading-tight" style="color: var(--text);">produktowych</span>
+                                <span class="text-[0.6rem] md:text-xs font-semibold mt-0.5 leading-tight" style="color: var(--text);">(ok. 200zł)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="table-section-container" class="p-2 mt-8">
+                 <h2 class="text-2xl md:text-3xl font-semibold text-center mb-6" style="color: var(--text);">Szczegółowa kalkulacja</h2>
+                <div>
+                    <div class="overflow-x-auto">
+                        <table id="calculation-table" class="min-w-full bg-white border border-gray-200 rounded-lg shadow">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="py-3 px-2 border-b border-r text-center align-middle w-12 strike-column"></th>
+                                    <th class="py-3 px-4 border-b text-left text-sm font-semibold text-slate-600">PRODUKT</th>
+                                    <th class="py-3 px-4 border-b text-left text-sm font-semibold text-slate-600 strike-column">NOTATKA</th>
+                                    <th class="py-3 px-4 border-b text-right text-sm font-semibold text-slate-600">POZA ZESTAWEM (PLN)</th>
+                                    <th class="py-3 px-4 border-b text-right text-sm font-semibold text-slate-600">W ZESTAWIE (PLN)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-slate-700">
+                                <tr data-product-name="Lemon">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Lemon">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Lemon</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">82,00</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">52,20</td>
+                                </tr>
+                                <tr data-product-name="Lavender">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Lavender">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Lavender</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">168,25</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">107,10</td>
+                                </tr>
+                                <tr data-product-name="Frankincense">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Frankincense">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Frankincense</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">434,25</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">276,43</td>
+                                </tr>
+                                <tr data-product-name="Peppermint">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Peppermint">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Peppermint</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">139,75</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">88,96</td>
+                                </tr>
+                                <tr data-product-name="Oregano">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Oregano">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Oregano</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">162,50</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">103,44</td>
+                                </tr>
+                                 <tr data-product-name="Tea Tree">
+                                     <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Tea Tree">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Tea Tree</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">133,00</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">84,66</td>
+                                </tr>
+                                <tr data-product-name="Air™">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Air™">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Air™</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">162,50</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">103,44</td>
+                                </tr>
+                                <tr data-product-name="ZenGest™">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="ZenGest™">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">ZenGest™</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">195,50</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">124,45</td>
+                                </tr>
+                                 <tr data-product-name="On Guard™">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="On Guard™">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">On Guard™</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">205,75</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">130,97</td>
+                                </tr>
+                                 <tr data-product-name="Deep Blue™">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Deep Blue™">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Deep Blue™</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">200,00</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">127,31</td>
+                                </tr>
+                                <tr data-product-name="Petal™ Diffuser 2.0">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Petal™ Diffuser 2.0">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Petal™ Diffuser 2.0</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">247,75</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">157,71</td>
+                                </tr>
+                                <tr data-product-name="Wild Orange" class="bg-green-50">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Wild Orange">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Wild Orange <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-green-100 text-green-700 ml-1">GRATIS</span></td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">76,25</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">48,54</td>
+                                </tr>
+                                <tr data-product-name="Balance™" class="bg-green-50">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Balance™">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Balance™ <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-green-100 text-green-700 ml-1">GRATIS</span></td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">137,50</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">87,54</td>
+                                </tr>
+                                <tr data-product-name="50 punktów produktowych" class="bg-green-50">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="50 punktów produktowych">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">50 punktów produktowych <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-green-100 text-green-700 ml-1">GRATIS</span></td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right italic" style="color: var(--text-secondary);">ok. 200zł</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold italic" style="color: var(--green);">0,00</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="bg-gray-100 text-slate-800">
+                                    <td id="footer-sum-cell" class="py-4 px-4 font-bold" colspan="3">Suma</td>
+                                    <td class="py-4 px-4 text-right font-normal">2 345,00 + ~200</td>
+                                    <td class="py-4 px-4 text-right font-bold">1 492,75</td>
+                                </tr>
+                                <tr id="strike-sum-row" class="bg-gray-200 text-slate-800">
+                                    <td id="footer-struck-sum-cell" class="py-3 px-4 font-semibold" colspan="3">Suma przekreślonych</td>
+                                    <td id="struck-sum-poza-cell" class="py-3 px-4 text-right font-semibold">0,00</td>
+                                    <td id="struck-sum-w-zestawie-cell" class="py-3 px-4 text-right font-semibold">0,00</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="mt-12 pt-8 text-center text-xs relative z-10" style="border-top: 1px solid var(--border); color: var(--text-muted);">
+            <p>Emilia Chodorowska · doTERRA Wellness Advocate</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Team Mode Detection ---
+            const isTeamMode = window.location.search.includes('team=true');
+
+            // --- UI Elements ---
+            const table = document.getElementById('calculation-table');
+            const allCheckboxes = table.querySelectorAll('.strike-toggle');
+
+            // --- Strikethrough Logic ---
+
+            function toggleStrike(productName, shouldStrike) {
+                const tableRow = document.querySelector(`#calculation-table tr[data-product-name="${productName}"]`);
+                const listItem = document.querySelector(`#kit-list li[data-product-name="${productName}"]`);
+
+                if (tableRow) {
+                    tableRow.classList.toggle('strike-row', shouldStrike);
+                }
+
+                if (listItem) {
+                    listItem.classList.toggle('line-through', shouldStrike);
+                    listItem.classList.toggle('text-gray-500', shouldStrike);
+                }
+            }
+
+            function updateStruckSum() {
+                let totalPoza = 0;
+                let totalWZestawie = 0;
+                const sumPozaCell = document.getElementById('struck-sum-poza-cell');
+                const sumWZestawieCell = document.getElementById('struck-sum-w-zestawie-cell');
+
+                allCheckboxes.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        const row = document.querySelector(`tr[data-product-name="${checkbox.dataset.productName}"]`);
+                        if (row) {
+                            const pozaPriceText = row.cells[3].textContent;
+                            const wZestawiePriceText = row.cells[4].textContent;
+                            const pozaVal = parseFloat(pozaPriceText.replace(/[^0-9,.]/g, '').replace(',', '.'));
+                            const wZestawieVal = parseFloat(wZestawiePriceText.replace(/[^0-9,.]/g, '').replace(',', '.'));
+                            if (!isNaN(pozaVal)) totalPoza += pozaVal;
+                            if (!isNaN(wZestawieVal)) totalWZestawie += wZestawieVal;
+                        }
+                    }
+                });
+
+                if(sumPozaCell && sumWZestawieCell) {
+                    sumPozaCell.textContent = totalPoza.toFixed(2).replace('.', ',');
+                    sumWZestawieCell.textContent = totalWZestawie.toFixed(2).replace('.', ',');
+                }
+            }
+
+            // --- Striking Feature (Always Enabled in Team Mode) ---
+            function initializeStriking() {
+                const strikeColumns = document.querySelectorAll('.strike-column');
+                const footerSumCell = document.getElementById('footer-sum-cell');
+                const footerStruckSumCell = document.getElementById('footer-struck-sum-cell');
+                const strikeSumRow = document.getElementById('strike-sum-row');
+
+                if (isTeamMode) {
+                    strikeColumns.forEach(col => col.classList.remove('hidden'));
+                    strikeSumRow.classList.remove('hidden');
+                    footerSumCell.setAttribute('colspan', '3');
+                    footerStruckSumCell.setAttribute('colspan', '3');
+
+                    allCheckboxes.forEach(checkbox => {
+                        checkbox.disabled = false;
+                    });
+                } else {
+                    strikeColumns.forEach(col => col.classList.add('hidden'));
+                    strikeSumRow.classList.add('hidden');
+                    footerSumCell.setAttribute('colspan', '1');
+                    footerStruckSumCell.setAttribute('colspan', '1');
+                }
+            }
+
+            // --- Event Listeners & Initial Calls ---
+            allCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', (event) => {
+                    toggleStrike(event.target.dataset.productName, event.target.checked);
+                    updateStruckSum();
+                });
+            });
+
+            initializeStriking();
+            updateStruckSum();
+        });
+    </script>
+
+</body>
+</html>
