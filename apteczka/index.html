@@ -9,29 +9,63 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Zestaw Home Essentials - Kompletna apteczka naturalna">
     <meta property="og:description" content="Zestaw Home Essentials dōTERRA - 10 olejków eterycznych + dyfuzor Petal. Naturalna apteczka domowa.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/emilia-chodorowska/new-client-offer/main/apteczka/social-preview.png">
-    <meta property="og:image:width" content="3508">
-    <meta property="og:image:height" content="2480">
-    <meta property="og:image:alt" content="Zestaw Home Essentials - Apteczka dōTERRA">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Zestaw Home Essentials - Kompletna apteczka naturalna">
     <meta name="twitter:description" content="Zestaw Home Essentials dōTERRA - 10 olejków eterycznych + dyfuzor Petal. Naturalna apteczka domowa.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/emilia-chodorowska/new-client-offer/main/apteczka/social-preview.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --purple: #7E57C2;
+            --purple-soft: #F3EEFA;
+            --purple-dark: #4D2C91;
+            --green: #4CAF50;
+            --bg-soft: #F9FAFB;
+            --text: #111827;
+            --text-secondary: #6B7280;
+            --text-muted: #9CA3AF;
+            --border: #E5E7EB;
+        }
+
         /* Custom font for the project */
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            background: var(--bg-soft);
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
+
+        .back-link {
+            color: var(--purple);
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            color: var(--purple-dark);
+            text-decoration: underline;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--purple);
+            background: var(--purple-soft);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            margin-bottom: 0.75rem;
+        }
+
         /* Styles for the price bubble to avoid positioning issues in Tailwind */
         .price-bubble {
             position: absolute;
@@ -92,16 +126,17 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 flex items-center justify-center min-h-screen py-8">
+<body class="flex items-center justify-center min-h-screen py-8">
 
     <div id="main-container" class="relative container max-w-5xl my-4 p-4 sm:p-6 md:p-8 bg-white shadow-xl">
 
-        <img 
+        <img
             src="images/liscie-gora.png"
-            alt="Dekoracyjne liście" 
+            alt="Dekoracyjne liście"
             class="absolute top-0 left-0 w-1/3 opacity-40 pointer-events-none"
         >
-        
+
+
         <header id="header-container" class="text-center mb-8 md:mb-12 relative z-10 p-2">
             <div>
                  <img
@@ -109,30 +144,30 @@
                     alt="dōTERRA Logo"
                     class="mx-auto mb-6 w-48 md:w-56"
                  >
-                 <h1 class="text-4xl md:text-5xl font-semibold leading-tight text-slate-800">Zestaw Home Essentials</h1>
+                 <h1 class="text-3xl md:text-4xl font-bold leading-tight" style="color: var(--text);">Zestaw Home Essentials</h1>
             </div>
         </header>
 
         <main id="main-content-container" class="relative z-10 flex flex-col gap-8 p-2">
-            
+
             <div id="top-section" class="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
                 <div id="product-image-container" class="relative p-2 w-fit justify-self-center">
                     <div id="main-image-container" class="bg-gray-50 p-3 rounded-xl shadow-inner">
-                        <img 
+                        <img
                             src="images/zestaw-olejkow.jpg"
-                            alt="Zestaw olejków dōTERRA Home Essentials" 
+                            alt="Zestaw olejków dōTERRA Home Essentials"
                             class="w-full rounded-lg shadow-md block"
                         >
                     </div>
-                    <div class="price-bubble bg-[#cce2d3] text-slate-800 font-bold text-xl md:text-2xl w-32 h-32 md:w-40 md:h-40 rounded-full flex items-center justify-center shadow-lg">
+                    <div class="price-bubble font-bold text-xl md:text-2xl w-32 h-32 md:w-40 md:h-40 rounded-full flex items-center justify-center shadow-lg" style="background: #cce2d3; color: #1e293b;">
                         1492,75zł
                     </div>
                 </div>
 
                 <div id="right-column-container" class="flex items-center p-2">
                     <div id="kit-contents-container" class="bg-white p-4 md:p-6 rounded-lg w-full h-fit border-2 border-[#a7c5a9]">
-                        <h3 class="text-center text-xl md:text-2xl font-semibold text-slate-800 mb-4">Zestaw zawiera:</h3>
-                        <ul id="kit-list" class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-2 text-base md:text-lg text-slate-600">
+                        <h3 class="text-center text-xl md:text-2xl font-semibold mb-4" style="color: var(--text);">Zestaw zawiera:</h3>
+                        <ul id="kit-list" class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-2 text-base md:text-lg" style="color: var(--text-secondary);">
                             <li data-product-name="Lemon">Lemon</li>
                             <li data-product-name="Lavender">Lavender</li>
                             <li data-product-name="Frankincense">Frankincense</li>
@@ -150,7 +185,7 @@
             </div>
 
             <div id="table-section-container" class="p-2 mt-8">
-                 <h2 class="text-2xl md:text-3xl font-semibold text-slate-800 text-center mb-6">Szczegółowa kalkulacja</h2>
+                 <h2 class="text-2xl md:text-3xl font-semibold text-center mb-6" style="color: var(--text);">Szczegółowa kalkulacja</h2>
                 <div>
                     <div class="overflow-x-auto">
                         <table id="calculation-table" class="min-w-full bg-white border border-gray-200 rounded-lg shadow">
@@ -282,6 +317,10 @@
             </div>
         </main>
 
+        <footer class="mt-12 pt-8 text-center text-xs relative z-10" style="border-top: 1px solid var(--border); color: var(--text-muted);">
+            <p>Emilia Chodorowska · doTERRA Wellness Advocate</p>
+        </footer>
+
     </div>
 
     <script>
@@ -294,7 +333,7 @@
             const allCheckboxes = table.querySelectorAll('.strike-toggle');
 
             // --- Strikethrough Logic ---
-            
+
             function toggleStrike(productName, shouldStrike) {
                 const tableRow = document.querySelector(`#calculation-table tr[data-product-name="${productName}"]`);
                 const listItem = document.querySelector(`#kit-list li[data-product-name="${productName}"]`);
@@ -302,13 +341,13 @@
                 if (tableRow) {
                     tableRow.classList.toggle('strike-row', shouldStrike);
                 }
-                
+
                 if (listItem) {
                     listItem.classList.toggle('line-through', shouldStrike);
                     listItem.classList.toggle('text-gray-500', shouldStrike);
                 }
             }
-            
+
             function updateStruckSum() {
                 let totalPoza = 0;
                 let totalWZestawie = 0;
@@ -376,4 +415,3 @@
 
 </body>
 </html>
-
