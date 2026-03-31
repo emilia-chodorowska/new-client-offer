@@ -20,109 +20,142 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            overflow-x: hidden;
+        :root {
+            --purple: #7E57C2;
+            --purple-soft: #F3EEFA;
+            --purple-dark: #4D2C91;
+            --green: #4CAF50;
+            --green-hover: #43A047;
+            --bg-soft: #F9FAFB;
+            --text: #111827;
+            --text-secondary: #6B7280;
+            --text-muted: #9CA3AF;
+            --border: #E5E7EB;
         }
 
-        .month-card {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .info-card {
             transition: all 0.3s ease;
         }
 
-        .month-card:hover {
+        .info-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 25px -5px rgba(167, 197, 169, 0.3), 0 10px 10px -5px rgba(167, 197, 169, 0.2);
+            border-color: var(--purple);
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--purple);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
         }
     </style>
 </head>
-<body class="bg-gray-50 flex items-center justify-center min-h-screen py-8">
+<body class="min-h-screen py-8 flex items-center justify-center" style="background: var(--bg-soft);">
 
-    <div class="relative container max-w-3xl my-4 p-4 sm:p-5 md:p-6 bg-white shadow-xl">
+    <div class="relative container max-w-3xl my-4 p-6 sm:p-8 md:p-12 bg-white shadow-xl">
 
+        <!-- Liscie dekoracyjne -->
         <img
             src="images/liscie-gora.png"
-            alt="Dekoracyjne liście"
-            class="absolute top-0 left-0 w-1/3 opacity-40 pointer-events-none"
+            alt=""
+            class="absolute top-0 left-0 w-1/3 opacity-40 pointer-events-none z-0"
+            onerror="this.style.display='none'"
         >
 
         <!-- Header -->
-        <header class="text-center mb-8 md:mb-12 relative z-10">
-            <img
-                src="apteczka/images/doterralogo.png"
-                alt="dōTERRA Logo"
-                class="mx-auto mb-6 w-48 md:w-56"
-            >
-            <h1 class="text-4xl md:text-5xl font-semibold leading-tight text-slate-800 mb-2">
-                Oferty dōTERRA
+        <header class="text-center mb-10 md:mb-14 relative z-10">
+            <span class="section-label">doTERRA</span>
+            <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-2" style="color: var(--text);">
+                Oferty dla nowych klientow
             </h1>
-            <p class="text-lg md:text-xl text-slate-600 font-light">
-                dla nowych klientów
+            <p class="text-base md:text-lg" style="color: var(--text-secondary);">
+                Zestawy i promocje dla osob rozpoczynajacych przygode z doTERRA
             </p>
         </header>
 
-        <!-- Current Offers Section -->
+        <!-- Karty -->
         <section class="mb-8 relative z-10">
             <div class="flex flex-col gap-6 max-w-2xl mx-auto">
 
-                <!-- Kwiecień 2026 -->
-                <div class="month-card block bg-white shadow-lg overflow-hidden">
-                    <div class="p-8">
-                        <div class="mb-4">
-                            <h3 class="text-2xl font-bold text-slate-800">Kwiecień 2026</h3>
+                <!-- Karta: Kwiecień 2026 -->
+                <a href="kwiecien/" class="info-card block bg-white border rounded-xl overflow-hidden" style="border-color: var(--border); text-decoration: none;">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full" style="background: var(--purple-soft); color: var(--purple);">
+                                Kwiecień 2026
+                            </span>
                         </div>
-                        <p class="text-slate-600 mb-6">
-                            Zestaw Home Essentials<br>
-                            <span class="text-sm text-slate-500">+ Wild Orange, Balance i 50 punktów produktowych GRATIS</span>
+                        <h3 class="text-xl font-bold mb-2" style="color: var(--text);">
+                            Zestaw Home Essentials + Promocja 200PV
+                        </h3>
+                        <p class="text-sm mb-4" style="color: var(--text-secondary);">
+                            10 olejkow + dyfuzor Petal + gratisy: Wild Orange, Balance i 50 punktow produktowych
                         </p>
-                        <div class="flex flex-col gap-2">
-                            <a href="kwiecien/" class="text-lg font-semibold text-[#a7c5a9] hover:underline">Zobacz ofertę →</a>
-                            <a href="kwiecien/?team=true" class="text-sm text-slate-500 hover:text-[#a7c5a9] hover:underline transition">Wybierz produkty</a>
-                        </div>
+                        <span class="text-sm font-semibold" style="color: var(--green);">
+                            Zobacz szczegoly →
+                        </span>
                     </div>
-                </div>
+                </a>
 
-                <!-- Marzec 2026 -->
-                <div class="month-card block bg-white shadow-lg overflow-hidden">
-                    <div class="p-8">
-                        <div class="mb-4">
-                            <h3 class="text-2xl font-bold text-slate-800">Marzec 2026</h3>
+                <!-- Karta: Marzec 2026 -->
+                <a href="marzec/" class="info-card block bg-white border rounded-xl overflow-hidden" style="border-color: var(--border); text-decoration: none;">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full" style="background: var(--purple-soft); color: var(--purple);">
+                                Marzec 2026
+                            </span>
                         </div>
-                        <p class="text-slate-600 mb-6">
-                            Zestaw Home Essentials<br>
-                            <span class="text-sm text-slate-500">+ 3 gratisy: Wild Orange, Balance i MetaPWR Recharge</span>
+                        <h3 class="text-xl font-bold mb-2" style="color: var(--text);">
+                            Zestaw Home Essentials + Promocja 200PV
+                        </h3>
+                        <p class="text-sm mb-4" style="color: var(--text-secondary);">
+                            10 olejkow + dyfuzor Petal + 3 gratisy: Wild Orange, Balance i MetaPWR Recharge
                         </p>
-                        <div class="flex flex-col gap-2">
-                            <a href="marzec/" class="text-lg font-semibold text-[#a7c5a9] hover:underline">Zobacz ofertę →</a>
-                            <a href="marzec/?team=true" class="text-sm text-slate-500 hover:text-[#a7c5a9] hover:underline transition">Wybierz produkty</a>
-                        </div>
+                        <span class="text-sm font-semibold" style="color: var(--green);">
+                            Zobacz szczegoly →
+                        </span>
                     </div>
-                </div>
+                </a>
 
-                <!-- Apteczka -->
-                <div class="month-card block bg-white shadow-lg overflow-hidden">
-                    <div class="p-8">
-                        <div class="mb-4">
-                            <h3 class="text-2xl font-bold text-slate-800">Apteczka</h3>
+                <!-- Karta: Apteczka -->
+                <a href="apteczka/" class="info-card block bg-white border rounded-xl overflow-hidden" style="border-color: var(--border); text-decoration: none;">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full" style="background: var(--purple-soft); color: var(--purple);">
+                                Zestaw
+                            </span>
                         </div>
-                        <p class="text-slate-600 mb-6">
-                            Zestaw Home Essentials
+                        <h3 class="text-xl font-bold mb-2" style="color: var(--text);">
+                            Apteczka — Zestaw Home Essentials
+                        </h3>
+                        <p class="text-sm mb-4" style="color: var(--text-secondary);">
+                            10 olejkow eterycznych + dyfuzor Petal 2.0 — kompletna apteczka naturalna
                         </p>
-                        <div class="flex flex-col gap-2">
-                            <a href="apteczka/" class="text-lg font-semibold text-[#a7c5a9] hover:underline">Zobacz ofertę →</a>
-                            <a href="apteczka/?team=true" class="text-sm text-slate-500 hover:text-[#a7c5a9] hover:underline transition">Wybierz produkty</a>
-                        </div>
+                        <span class="text-sm font-semibold" style="color: var(--green);">
+                            Zobacz szczegoly →
+                        </span>
                     </div>
-                </div>
+                </a>
 
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="mt-12 pt-8 border-t border-gray-200 text-center text-slate-400 text-sm">
-            <p class="text-xs">Emilia Chodorowska • dōTERRA Wellness Advocate</p>
+        <footer class="mt-12 pt-8 text-center text-xs relative z-10" style="border-top: 1px solid var(--border); color: var(--text-muted);">
+            <p>Emilia Chodorowska · doTERRA Wellness Advocate</p>
         </footer>
 
     </div>
