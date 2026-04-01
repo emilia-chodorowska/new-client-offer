@@ -59,6 +59,22 @@
             margin-bottom: 0.75rem;
         }
 
+        .price-bubble {
+            position: absolute;
+            top: -2rem;
+            right: -2rem;
+        }
+
+        @media (max-width: 768px) {
+            .price-bubble {
+                width: 8rem !important;
+                height: 8rem !important;
+                font-size: 1.25rem !important;
+                top: -1.5rem;
+                right: -1.5rem;
+            }
+        }
+
         .points-badge {
             background: linear-gradient(135deg, #E8F5E9, #cce2d3);
             border: 2px solid #a7c5a9;
@@ -108,10 +124,13 @@
                 <div class="relative p-2 w-fit justify-self-center">
                     <div class="bg-gray-50 p-3 rounded-xl shadow-inner">
                         <img
-                            src="images/zestaw.jpg"
+                            src="images/zestaw-studio.jpg"
                             alt="Zestaw dōTERRA Kids Collection"
                             class="w-full rounded-lg shadow-md block"
                         >
+                    </div>
+                    <div class="price-bubble font-bold text-xl md:text-2xl w-28 h-28 md:w-36 md:h-36 rounded-full flex items-center justify-center shadow-lg" style="background: #cce2d3; color: #1e293b;">
+                        675,25 zł
                     </div>
                 </div>
 
