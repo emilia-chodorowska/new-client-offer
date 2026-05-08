@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Family Essentials — Opcja A vs B</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, sans-serif; background: #1a1a1a; color: #fff; padding: 30px; }
+  h1 { text-align: center; font-size: 22px; margin-bottom: 30px; font-weight: 400; }
+  .grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 30px;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .option {
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .label {
+    font-size: 28px; font-weight: 700; margin-bottom: 10px;
+    color: #c9a96e;
+  }
+  .desc {
+    font-size: 14px; color: #aaa; margin-bottom: 15px; text-align: center;
+  }
+  .option img {
+    width: 100%; border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+</style>
+</head>
+<body>
+<h1>Family Essentials Kit — którą grafikę wybierasz?</h1>
+<div class="grid">
+  <div class="option">
+    <div class="label">Opcja A</div>
+    <div class="desc">Buteleczki w rzędzie przed pudełkiem, lifestyle, jasna kuchnia</div>
+    <img src="img1.jpg" alt="Opcja A">
+  </div>
+  <div class="option">
+    <div class="label">Opcja B</div>
+    <div class="desc">Otwarte pudełko + książeczka Essentials, białe tło studyjne</div>
+    <img src="img2.jpg" alt="Opcja B">
+  </div>
+</div>
+</body>
+</html>
