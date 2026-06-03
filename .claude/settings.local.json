@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nZmiana tytułu strony i ukrycie przełączników dla klientów\n\n- Zmiana tytułu zakładki na \"Apteczka dla nowej osoby – październik 2025\"\n- Usunięcie przełącznika \"Pokaż ramki\" i związanego z nim kodu JavaScript\n- Ukrycie przełączników domyślnie (dodanie class ''hidden'')\n- Dodanie detekcji parametru URL ?team=true dla trybu zespołu\n- Przełączniki widoczne tylko gdy URL zawiera ?team=true\n- Dla klientów: czysta strona z widoczną tabelą, bez przełączników\n- Dla zespołu: pełna funkcjonalność z przełącznikami\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git commit -m \"$(cat <<''EOF''\nDopracowanie przełączników - elegancki panel z animacjami\n\n- Dodanie eleganckiego białego panelu z zieloną ramką (#a7c5a9)\n- Zmiana koloru przełączników na zielony pasujący do brandingu\n- Dodanie ikon emoji (📊 i ✏️) przed przełącznikami\n- Implementacja animacji hover dla labeli i całego panelu\n- Dodanie responsywności - na mobile przełączniki przesuwają się na dół\n- Płynne przejścia i efekty cienia z zielonym akcentem\n- Układ pionowy na desktop, poziomy na mobile\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git commit:*)",
+      "Bash(test:*)",
+      "Bash(git log:*)",
+      "Bash(sips:*)",
+      "Bash(git mv:*)",
+      "Bash(git checkout:*)",
+      "Bash(cp:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(ls:*)",
+      "mcp__linear__list_teams",
+      "mcp__linear__list_users",
+      "mcp__linear__create_issue",
+      "Bash(open /Users/emiliachodorowska/MyProjects/new-client-offer/marzec/index.html)",
+      "Bash(cp -r /Users/emiliachodorowska/MyProjects/doTERRA/new-client-offer/kwiecien /Users/emiliachodorowska/MyProjects/doTERRA/new-client-offer/maj)",
+      "Bash(cp -r /Users/emiliachodorowska/MyProjects/doTERRA/new-client-offer/kwiecien-family /Users/emiliachodorowska/MyProjects/doTERRA/new-client-offer/maj-family)",
+      "Bash(cp -r /Users/emiliachodorowska/MyProjects/doTERRA/new-client-offer/kwiecien-kids /Users/emiliachodorowska/MyProjects/doTERRA/new-client-offer/maj-kids)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
