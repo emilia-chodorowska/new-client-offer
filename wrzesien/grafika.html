@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Wrzesień 2026 · Home Essentials — grafika</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF6F0;
+    --cream-deep:#F3EDE3;
+    --forest:#2E4034;
+    --forest-soft:#4A5B4E;
+    --sage:#A9BDA7;
+    --sage-light:#D6E0D4;
+    --sage-pale:#EDF1EB;
+    --ink:#3D3D38;
+    --ink-soft:#6B6B62;
+    --orange:#C96A2E;
+    --line:#E4DCD0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:#DCD6CC;
+    font-family:'Lato',sans-serif;
+    display:flex;align-items:flex-start;justify-content:center;
+    padding:40px 20px;
+  }
+  .card{
+    position:relative;
+    width:1080px;height:1080px;
+    background:var(--cream);
+    overflow:hidden;
+    display:flex;flex-direction:column;justify-content:space-between;
+    padding:42px 50px;
+    box-shadow:0 18px 60px rgba(46,64,52,.22);
+  }
+  body.shot{background:transparent;padding:0;}
+  body.shot .card{box-shadow:none;}
+
+  /* dekoracja liści */
+  .leaves{position:absolute;top:-18px;left:-30px;width:330px;opacity:.34;pointer-events:none;}
+
+  /* ── nagłówek ── */
+  .head{text-align:center;position:relative;z-index:2;}
+  .logo{height:30px;margin:0 auto 12px;display:block;}
+  h1{
+    font-family:'Playfair Display',serif;font-weight:700;
+    font-size:66px;line-height:1;color:var(--forest);
+    letter-spacing:-.5px;
+  }
+  .sub{
+    font-weight:300;font-size:27px;color:var(--ink-soft);
+    margin-top:8px;letter-spacing:.2px;
+  }
+
+  /* ── hero: zdjęcie + lista ── */
+  .hero{
+    display:grid;grid-template-columns:508px 1fr;gap:30px;
+    align-items:center;
+  }
+  .shot-wrap{position:relative;display:flex;align-items:center;}
+  .shot-wrap::before{
+    content:'';position:absolute;z-index:0;
+    left:-14px;top:50%;transform:translateY(-50%);
+    width:346px;height:346px;border-radius:50%;
+    background:#E9EFE6;
+  }
+  .shot-wrap img.kit{
+    position:relative;z-index:1;
+    width:100%;display:block;
+    filter:drop-shadow(0 12px 22px rgba(46,64,52,.16));
+  }
+  .bubble{
+    position:absolute;z-index:3;top:-6px;right:-38px;
+    width:164px;height:164px;border-radius:50%;
+    background:var(--sage);color:#fff;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    box-shadow:0 8px 22px rgba(46,64,52,.22);
+    border:5px solid var(--cream);
+  }
+  .bubble svg{width:20px;height:20px;opacity:.85;margin-bottom:3px;}
+  .bubble .amt{font-family:'Playfair Display',serif;font-size:31px;font-weight:600;line-height:1;}
+  .bubble .cur{font-size:15px;font-weight:400;letter-spacing:.6px;margin-top:3px;opacity:.95;}
+
+  .list-head{
+    font-family:'Playfair Display',serif;font-weight:600;
+    font-size:29px;color:var(--forest);text-align:center;
+  }
+  .rule{display:flex;align-items:center;gap:12px;margin:10px 0 16px;}
+  .rule::before,.rule::after{content:'';flex:1;height:1px;background:var(--line);}
+  .rule svg{width:16px;height:16px;color:var(--sage);}
+  ul.kit-list{
+    list-style:none;
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:13px 22px;
+  }
+  ul.kit-list li{
+    display:flex;align-items:baseline;gap:10px;
+    font-size:20px;color:var(--ink);font-weight:400;line-height:1.2;
+  }
+  ul.kit-list li::before{
+    content:'';flex:none;width:7px;height:7px;border-radius:50%;
+    background:var(--sage);transform:translateY(-3px);
+  }
+  ul.kit-list li .ml{font-size:16px;color:var(--ink-soft);font-weight:300;}
+
+  /* ── promocja ── */
+  .promo{
+    border:1.5px solid var(--line);border-radius:20px;
+    background:#FFFDF9;padding:20px 26px;
+    display:grid;grid-template-columns:344px 1fr;gap:24px;align-items:center;
+  }
+  .promo-title{
+    display:flex;align-items:center;gap:10px;
+    font-family:'Playfair Display',serif;font-weight:700;
+    font-size:25px;color:var(--orange);margin-bottom:9px;
+  }
+  .promo-title svg{width:26px;height:26px;flex:none;}
+  .promo-txt{font-size:19px;line-height:1.36;color:var(--ink);}
+  .promo-txt b{font-weight:700;}
+  .promo-txt .val{color:var(--orange);font-weight:900;}
+  .promo-note{font-size:13px;line-height:1.4;color:var(--ink-soft);font-weight:300;margin-top:9px;}
+  .bottles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:end;}
+  .bottle{text-align:center;}
+  .bottle .pic{
+    position:relative;height:142px;
+    display:flex;align-items:flex-end;justify-content:center;
+  }
+  .bottle .pic img{max-height:142px;max-width:100%;display:block;}
+  .bottle .pic::after{
+    content:'';position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);
+    width:66%;height:9px;border-radius:50%;
+    background:radial-gradient(ellipse at center,rgba(46,64,52,.20),transparent 72%);
+  }
+  .bottle .cap{font-size:13px;color:var(--ink-soft);margin-top:9px;line-height:1.2;}
+
+  .bottom{display:flex;flex-direction:column;gap:12px;}
+
+  /* ── pasek faktów ── */
+  .facts{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:18px 0;
+  }
+  .fact{
+    display:flex;align-items:center;gap:12px;padding:0 16px;
+  }
+  .fact + .fact{border-left:1px solid var(--line);}
+  .fact svg{width:26px;height:26px;color:var(--sage);flex:none;}
+  .fact .big{font-size:19px;font-weight:700;color:var(--forest);line-height:1.15;}
+  .fact .small{font-size:13.5px;font-weight:300;color:var(--ink-soft);line-height:1.25;margin-top:2px;}
+
+  /* ── stopka ── */
+  .foot{
+    padding-top:2px;
+    display:flex;align-items:center;justify-content:space-between;
+    font-size:14.5px;color:var(--ink-soft);font-weight:300;
+  }
+  .foot .name{font-weight:400;color:var(--forest-soft);}
+</style>
+</head>
+<body>
+<div class="card">
+  <img class="leaves" src="images/liscie-gora.png" alt="">
+
+  <header class="head">
+    <img class="logo" src="images/doterralogo.png" alt="dōTERRA">
+    <h1>Wrzesień 2026</h1>
+    <div class="sub">Zestaw Home Essentials</div>
+  </header>
+
+  <section class="hero">
+    <div class="shot-wrap">
+      <img class="kit" src="images/zestaw-olejkow.jpg" alt="Zestaw Home Essentials">
+      <div class="bubble">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        <div class="amt">1492,75</div>
+        <div class="cur">zł</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="list-head">Zestaw zawiera:</div>
+      <div class="rule"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div>
+      <ul class="kit-list">
+        <li>Lemon</li>
+        <li>Lavender</li>
+        <li>Frankincense</li>
+        <li>Peppermint</li>
+        <li>Oregano</li>
+        <li>Tea Tree</li>
+        <li>Air&trade;</li>
+        <li>ZenGest&trade;</li>
+        <li>On Guard&trade;</li>
+        <li>Deep Blue&trade; <span class="ml">5 ml</span></li>
+        <li>Petal&trade; Diffuser 2.0</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="promo">
+    <div>
+      <div class="promo-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>
+        Promocja 200 PV
+      </div>
+      <div class="promo-txt">
+        <b>Gratis:</b> Wild Orange, dōTERRA Balance&trade;, Deep&nbsp;Blue&trade; Rub i Copaiba —
+        <span class="val">o wartości ok. 630 zł</span>
+      </div>
+      <div class="promo-note">Dotyczy zamówienia rejestracyjnego na 200 PV lub więcej, złożonego do 30 września 2026 r.</div>
+    </div>
+    <div class="bottles">
+      <div class="bottle"><div class="pic"><img src="images/wild-orange.png" alt=""></div><div class="cap">Wild Orange</div></div>
+      <div class="bottle"><div class="pic"><img src="images/balance.png" alt=""></div><div class="cap">dōTERRA Balance&trade;</div></div>
+      <div class="bottle"><div class="pic"><img src="images/deep-blue-rub.png" alt=""></div><div class="cap">Deep Blue&trade; Rub</div></div>
+      <div class="bottle"><div class="pic"><img src="images/copaiba.png" alt=""></div><div class="cap">Copaiba</div></div>
+    </div>
+  </section>
+
+  <div class="bottom">
+  <section class="facts">
+    <div class="fact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>
+      <div><div class="big">10 olejków + dyfuzor</div><div class="small">9 × 15 ml, Deep Blue 5 ml</div></div>
+    </div>
+    <div class="fact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>
+      <div><div class="big">4 produkty gratis</div><div class="small">przy zamówieniu 200 PV</div></div>
+    </div>
+    <div class="fact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
+      <div><div class="big">2757,75 zł osobno</div><div class="small">15 produktów poza zestawem</div></div>
+    </div>
+    <div class="fact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg>
+      <div><div class="big">1265 zł oszczędności</div><div class="small">o 46% taniej niż osobno</div></div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span class="name">Emilia Chodorowska · doTERRA Wellness Advocate</span>
+    <span>Pełna kalkulacja: emilia-chodorowska.github.io/new-client-offer/wrzesien/</span>
+  </footer>
+  </div>
+</div>
+
+<script>
+  if (location.hash === '#shot') document.body.classList.add('shot');
+</script>
+</body>
+</html>
