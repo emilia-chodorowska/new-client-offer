@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wrzesień 2026 · Home Essentials — grafika</title>
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
 <style>
-body { margin:0; background:#e8e5de; -webkit-font-smoothing:antialiased; }
+  body { margin:0; background:#e8e5de; -webkit-font-smoothing:antialiased; }
   a { color:#6b8260; text-decoration:none; }
   a:hover { color:#5e7d72; }
-  /* #shot — sama karta, bez tla strony, marginesu i cienia (zrodlo PNG) */
-  body.shot { background:transparent; }
-  body.shot > div { padding:0 !important; }
-  body.shot > div > div { box-shadow:none !important; }
 </style>
-</head>
-<body>
+</helmet>
 <div style="display:flex;align-items:flex-start;justify-content:center;padding:40px 20px;font-family:'Lato',sans-serif;color:#24241f">
   <div style="box-sizing:border-box;flex:none;position:relative;width:1080px;height:1080px;background:#ffffff;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:84px 92px;box-shadow:0 18px 60px rgba(36,36,31,.18)">
 
-    
-      <img src="images/liscie-gora.png" alt="" style="position:absolute;top:-18px;left:-30px;width:330px;opacity:.2;pointer-events:none" />
-    
+    <sc-if value="{{ showLeaves }}" hint-placeholder-val="{{ true }}">
+      <img src="wrzesien/images/liscie-gora.png" alt="" style="position:absolute;top:-18px;left:-30px;width:330px;opacity:.2;pointer-events:none" />
+    </sc-if>
 
     <header style="text-align:center;position:relative;z-index:2">
-      <img src="images/doterralogo.png" alt="dōTERRA" style="height:26px;width:auto;display:block;margin:0 auto 14px;opacity:.85" />
+      <img src="wrzesien/images/doterralogo.png" alt="dōTERRA" style="height:26px;width:auto;display:block;margin:0 auto 14px;opacity:.85" />
       <h1 style="margin:0;font-family:'Playfair Display',serif;font-size:64px;font-weight:700;line-height:1.02;letter-spacing:-.5px;color:#24241f">Wrzesień 2026</h1>
       <div style="margin-top:10px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#8e8d84">Zestaw Home Essentials</div>
     </header>
@@ -35,10 +33,10 @@ body { margin:0; background:#e8e5de; -webkit-font-smoothing:antialiased; }
     <section style="display:grid;grid-template-columns:452px minmax(0,1fr);gap:28px;align-items:center;position:relative;z-index:2">
       <div style="position:relative;display:flex;align-items:center;min-width:0;max-width:452px">
         <span style="content:'';position:absolute;z-index:0;left:-12px;top:50%;transform:translateY(-50%);width:372px;height:372px;border-radius:50%;background:#eaf0e7"></span>
-        <img src="images/zestaw-olejkow.jpg" alt="Zestaw Home Essentials" style="position:relative;z-index:1;width:100%;display:block" />
-        <div style="position:absolute;z-index:3;top:-26px;right:-4px;width:146px;height:146px;border-radius:50%;background:#c3d2bc;color:#2c3a29;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding-bottom:10px">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="width:17px;height:17px;opacity:.75"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
-          <div style="display:flex;align-items:baseline;gap:5px;font-variant-numeric:tabular-nums"><span style="font-family:'Playfair Display',serif;font-size:28px;font-weight:600;letter-spacing:-.01em;line-height:1">1492,75</span><span style="font-family:'Playfair Display',serif;font-size:14px;font-weight:500">zł</span></div>
+        <img src="wrzesien/images/zestaw-olejkow.jpg" alt="Zestaw Home Essentials" style="position:relative;z-index:1;width:100%;display:block" />
+        <div style="position:absolute;z-index:3;top:-26px;right:-4px;width:178px;height:178px;border-radius:50%;background:#c3d2bc;color:#2c3a29;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding-bottom:14px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;opacity:.75"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
+          <div style="display:flex;align-items:baseline;gap:7px;font-variant-numeric:tabular-nums"><span style="font-family:'Playfair Display',serif;font-size:36px;font-weight:600;letter-spacing:-.01em;line-height:1">1492,75</span><span style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500">zł</span></div>
         </div>
       </div>
 
@@ -70,15 +68,15 @@ body { margin:0; background:#e8e5de; -webkit-font-smoothing:antialiased; }
         <div style="font-size:13px;line-height:1.45;color:#8e8d84">Dotyczy zamówienia rejestracyjnego na 200 PV lub więcej, złożonego do 30 września 2026 r.</div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:end">
-        <div style="text-align:center"><div style="height:136px;display:flex;align-items:flex-end;justify-content:center"><img src="images/wild-orange.png" alt="" style="max-height:136px;max-width:100%;display:block" /></div><div style="font-size:12.5px;color:#8e8d84;margin-top:9px;line-height:1.2">Wild Orange</div></div>
-        <div style="text-align:center"><div style="height:136px;display:flex;align-items:flex-end;justify-content:center"><img src="images/balance.png" alt="" style="max-height:136px;max-width:100%;display:block" /></div><div style="font-size:12.5px;color:#8e8d84;margin-top:9px;line-height:1.2">dōTERRA Balance&trade;</div></div>
-        <div style="text-align:center"><div style="height:136px;display:flex;align-items:flex-end;justify-content:center"><img src="images/deep-blue-rub.png" alt="" style="max-height:136px;max-width:100%;display:block" /></div><div style="font-size:12.5px;color:#8e8d84;margin-top:9px;line-height:1.2">Deep Blue&trade; Rub</div></div>
-        <div style="text-align:center"><div style="height:136px;display:flex;align-items:flex-end;justify-content:center"><img src="images/copaiba.png" alt="" style="max-height:136px;max-width:100%;display:block" /></div><div style="font-size:12.5px;color:#8e8d84;margin-top:9px;line-height:1.2">Copaiba</div></div>
+        <div style="text-align:center"><div style="height:136px;display:flex;align-items:flex-end;justify-content:center"><img src="wrzesien/images/wild-orange.png" alt="" style="max-height:136px;max-width:100%;display:block" /></div><div style="font-size:12.5px;color:#8e8d84;margin-top:9px;line-height:1.2">Wild Orange</div></div>
+        <div style="text-align:center"><div style="height:136px;display:flex;align-items:flex-end;justify-content:center"><img src="wrzesien/images/balance.png" alt="" style="max-height:136px;max-width:100%;display:block" /></div><div style="font-size:12.5px;color:#8e8d84;margin-top:9px;line-height:1.2">dōTERRA Balance&trade;</div></div>
+        <div style="text-align:center"><div style="height:136px;display:flex;align-items:flex-end;justify-content:center"><img src="wrzesien/images/deep-blue-rub.png" alt="" style="max-height:136px;max-width:100%;display:block" /></div><div style="font-size:12.5px;color:#8e8d84;margin-top:9px;line-height:1.2">Deep Blue&trade; Rub</div></div>
+        <div style="text-align:center"><div style="height:136px;display:flex;align-items:flex-end;justify-content:center"><img src="wrzesien/images/copaiba.png" alt="" style="max-height:136px;max-width:100%;display:block" /></div><div style="font-size:12.5px;color:#8e8d84;margin-top:9px;line-height:1.2">Copaiba</div></div>
       </div>
     </section>
 
     <div style="display:flex;flex-direction:column;gap:12px;position:relative;z-index:2">
-      
+      <sc-if value="{{ showFacts }}" hint-placeholder-val="{{ true }}">
         <section style="display:grid;grid-template-columns:repeat(4,1fr);align-items:stretch;border-top:1px solid #ebe9e4;border-bottom:1px solid #ebe9e4;padding:20px 0">
           <div style="padding:0 20px 0 0;display:flex;flex-direction:column;justify-content:flex-start;text-align:center">
             <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:#24241f;line-height:1.2;min-height:48px">10 olejków + dyfuzor</div>
@@ -97,12 +95,21 @@ body { margin:0; background:#e8e5de; -webkit-font-smoothing:antialiased; }
             <div style="font-size:13.5px;color:#8e8d84;line-height:1.3;margin-top:2px">o 46% taniej niż osobno</div>
           </div>
         </section>
-      
+      </sc-if>
     </div>
   </div>
 </div>
-<script>
-  if (location.hash === '#shot') document.body.classList.add('shot');
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:1200},&quot;showLeaves&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Grafika&quot;},&quot;showFacts&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Grafika&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showLeaves: this.props.showLeaves ?? true,
+      showFacts: this.props.showFacts ?? true
+    };
+  }
+}
 </script>
 </body>
 </html>
