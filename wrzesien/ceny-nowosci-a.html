@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Wrzesień 2026 · ceny — układ obok siebie</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#e8e5de;font-family:'Lato',sans-serif;color:#24241f;
+       display:flex;align-items:flex-start;justify-content:center;padding:40px 20px;
+       -webkit-font-smoothing:antialiased}
+  .card{position:relative;width:1080px;height:1080px;background:#fff;overflow:hidden;
+        display:flex;flex-direction:column;justify-content:space-between;
+        padding:84px 92px;box-shadow:0 18px 60px rgba(36,36,31,.18)}
+  body.shot{background:transparent;padding:0}
+  body.shot .card{box-shadow:none}
+  .leaves{position:absolute;top:-18px;left:-30px;width:330px;opacity:.2;pointer-events:none}
+  header{text-align:center;position:relative;z-index:2}
+  header img.logo{height:26px;display:block;margin:0 auto 14px}
+  h1{font-family:'Playfair Display',serif;font-size:64px;font-weight:700;line-height:1.02;letter-spacing:-.5px}
+  .kicker{margin-top:10px;font-size:12px;font-weight:600;letter-spacing:.18em;
+          text-transform:uppercase;color:#69685f}
+  .micro{font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#69685f}
+  .nazwa{font-family:'Playfair Display',serif;font-weight:600;color:#24241f;line-height:1.16}
+  .opis{color:#69685f;line-height:1.35}
+  .cena{font-family:'Playfair Display',serif;font-weight:700;color:#24241f;
+        line-height:1;font-variant-numeric:tabular-nums}
+  .stopka{position:relative;z-index:2;border-top:1px solid #ebe9e4;padding-top:16px;
+          display:flex;justify-content:space-between;font-size:13.5px;color:#69685f}
+  .siatka{display:grid;grid-template-columns:1fr 1fr;gap:0;position:relative;z-index:2}
+  .produkt{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 34px}
+  .produkt + .produkt{border-left:1px solid #ebe9e4}
+  .foto{position:relative;height:340px;display:flex;align-items:center;justify-content:center;width:100%}
+  .foto::before{content:'';position:absolute;width:290px;height:290px;border-radius:50%;background:#eaf0e7}
+  .foto img{position:relative;max-height:340px;max-width:78%}
+  .produkt .nazwa{font-size:27px;margin-top:26px;min-height:64px}
+  .produkt .opis{font-size:15px;margin-top:8px}
+  .produkt .micro{margin-top:24px}
+  .produkt .cena{font-size:44px;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="card">
+  <img class="leaves" src="images/liscie-gora.png" alt="">
+  <header>
+    <img class="logo" src="images/doterralogo.png" alt="dōTERRA">
+    <h1>Wrzesień 2026</h1>
+    <div class="kicker">Nowości · ceny</div>
+  </header>
+  <section class="siatka">
+    <div class="produkt">
+      <div class="foto"><img src="images/60231963-eu-25ml-echinacea.png" alt=""></div>
+      <div class="nazwa">Echinacea</div>
+      <div class="opis">olejek eteryczny · 2,5 ml · 66,5 PV</div>
+      <div class="micro">Cena dla Klientów</div>
+      <div class="cena">349,25 zł</div>
+    </div>
+    <div class="produkt">
+      <div class="foto"><img src="images/60232992-on-guard-echinacea-stick.png" alt=""></div>
+      <div class="nazwa">Sztyft On Guard&trade;<br>+ Echinacea</div>
+      <div class="opis">sztyft · 28 PV</div>
+      <div class="micro">Cena dla Klientów</div>
+      <div class="cena">155,75 zł</div>
+    </div>
+  </section>
+  <div class="stopka">
+    <span>Emilia Chodorowska · doTERRA Wellness Advocate</span>
+  </div>
+</div>
+<script>if(location.hash==='#shot')document.body.classList.add('shot');</script>
+</body>
+</html>

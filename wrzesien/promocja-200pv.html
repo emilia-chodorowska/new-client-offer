@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Wrzesień 2026 · Promocja 200 PV</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#e8e5de;font-family:'Lato',sans-serif;color:#24241f;
+       display:flex;align-items:flex-start;justify-content:center;padding:40px 20px;
+       -webkit-font-smoothing:antialiased}
+  .card{position:relative;width:1080px;height:1080px;background:#fff;overflow:hidden;
+        display:flex;flex-direction:column;justify-content:center;
+        padding:64px 84px 150px;box-shadow:0 18px 60px rgba(36,36,31,.18)}
+  body.shot{background:transparent;padding:0}
+  body.shot .card{box-shadow:none}
+  .leaves{position:absolute;top:-18px;left:-30px;width:330px;opacity:.2;pointer-events:none}
+
+  header{text-align:center;position:relative;z-index:2}
+  header img.logo{height:26px;display:block;margin:0 auto 14px}
+
+  .data{font-size:14px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#8a897f;margin-bottom:20px}
+  .micro{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#69685f}
+  .glowna{position:relative;z-index:2;text-align:center}
+  .warunek{font-family:'Playfair Display',serif;font-size:54px;font-weight:700;line-height:1.06;letter-spacing:-.5px}
+  .termin{font-size:19.5px;color:#69685f;margin-top:9px}
+
+  .gratisy{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:22px}
+  .gratis{display:flex;flex-direction:column;align-items:center;padding:0 30px}
+  .gratis + .gratis{border-left:1px solid #ebe9e4}
+  .foto{position:relative;height:250px;display:flex;align-items:center;justify-content:center;width:100%}
+  .foto::before{content:'';position:absolute;width:212px;height:212px;border-radius:50%;background:#eaf0e7}
+  .foto img{position:relative;max-height:250px;max-width:70%}
+  .gratis .nazwa{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;margin-top:16px;line-height:1.2}
+  .gratis .opis{font-size:16.5px;color:#69685f;margin-top:6px}
+
+  .wartosc{margin-top:20px;display:inline-flex;align-items:baseline;gap:10px;
+           padding:11px 24px;border-radius:999px;background:#eef2ea}
+  .wartosc .et{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#55704a}
+  .wartosc .kw{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#3f5637}
+
+  .lrp{margin-top:34px;position:relative;z-index:2;border-top:1px solid #ebe9e4;padding-top:22px;
+       display:grid;grid-template-columns:150px 1fr auto;gap:26px;align-items:center}
+  .lrp .foto{height:150px}
+  .lrp .foto::before{width:132px;height:132px}
+  .lrp .foto img{max-height:150px;max-width:64%}
+  .lrp .tytul{font-family:'Playfair Display',serif;font-size:26px;font-weight:600;line-height:1.2}
+  .lrp .tresc{font-size:17.5px;color:#69685f;line-height:1.4;margin-top:8px}
+  .lrp .kwota{text-align:right;white-space:nowrap}
+  .lrp .kwota .kw{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;color:#69685f;margin-top:6px}
+
+  .stopka{position:absolute;left:84px;right:84px;bottom:58px;z-index:2;border-top:1px solid #ebe9e4;padding-top:15px;
+          font-size:13.5px;color:#69685f}
+</style>
+</head>
+<body>
+<div class="card">
+  <img class="leaves" src="images/liscie-gora.png" alt="">
+
+  <header>
+    <img class="logo" src="images/doterralogo.png" alt="dōTERRA">
+    <div class="data">Wrzesień 2026</div>
+    <div class="warunek">Zamówienie od 200 PV</div>
+    <div class="termin">jedno zamówienie złożone między 1 a 30 września 2026</div>
+  </header>
+
+  <section class="glowna">
+
+    <div class="gratisy">
+      <div class="gratis">
+        <div class="foto"><img src="images/copaiba.png" alt=""></div>
+        <div class="nazwa">Copaiba</div>
+        <div class="opis">olejek eteryczny · 15 ml</div>
+      </div>
+      <div class="gratis">
+        <div class="foto"><img src="images/60223856-deep-blue-rub.png" alt=""></div>
+        <div class="nazwa">Maść Deep Blue</div>
+        <div class="opis">120 ml</div>
+      </div>
+    </div>
+
+    <div class="wartosc"><span class="et">Oba gratis · wartość</span><span class="kw">ok. 410 zł</span></div>
+  </section>
+
+  <section class="lrp">
+    <div class="foto"><img src="images/60211107-cypress.png" alt=""></div>
+    <div>
+      <div class="tytul">Z zamówieniem LRP — dodatkowo Cyprys</div>
+      <div class="tresc">Pierwsze zamówienie lojalnościowe od 125 PV, złożone do 15 września 2026, dokłada olejek Cyprys 15 ml gratis.</div>
+    </div>
+    <div class="kwota"><div class="micro">Wartość</div><div class="kw">ok. 100 zł</div></div>
+  </section>
+
+  <div class="stopka">
+    Emilia Chodorowska · doTERRA Wellness Advocate
+  </div>
+</div>
+<script>if(location.hash==='#shot')document.body.classList.add('shot');</script>
+</body>
+</html>
