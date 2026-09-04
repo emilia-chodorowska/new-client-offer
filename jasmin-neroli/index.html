@@ -50,12 +50,13 @@
   .hero img{width:100%;height:340px;object-fit:cover;object-position:center 86%}
   .hero figcaption{padding:10px 68px 0}
 
-  .stats{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:34px 68px 0}
-  .stats div{padding:22px 20px;text-align:center;border-left:1px solid var(--line)}
-  .stats div:first-child{border-left:0;padding-left:0}
-  .stats div:last-child{padding-right:0}
-  .stat-n{font-family:var(--serif);font-size:29px;font-weight:600;line-height:1.15;color:var(--ink);min-height:56px;display:flex;align-items:center;justify-content:center}
-  .stat-l{font-size:12.5px;color:var(--muted);line-height:1.4;margin-top:6px}
+  .stats{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;margin:42px 68px 0}
+  .stats > div{padding:34px 44px 36px}
+  .stats > div:nth-child(odd){padding-left:0;border-right:1px solid var(--line)}
+  .stats > div:nth-child(even){padding-right:0}
+  .stats > div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .stat-n{font-family:var(--serif);font-size:44px;font-weight:400;line-height:1.1;letter-spacing:.005em;color:var(--ink)}
+  .stat-l{font-size:14.5px;color:var(--muted);line-height:1.5;margin-top:12px;max-width:24em}
 
   section.block{position:relative;z-index:2;padding:46px 68px 0}
   .pill{display:inline-flex;align-items:center;height:28px;padding:0 13px;border-radius:999px;background:var(--green-pill);color:var(--green);font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase}
@@ -66,11 +67,15 @@
   p{margin:0 0 14px;font-size:15.5px;color:var(--ink-2)}
   p:last-child{margin-bottom:0}
 
-  .inset{margin-top:26px;border:1px solid var(--line);background:var(--soft);padding:26px 30px}
+  .inset{margin-top:30px;border:1px solid var(--line);background:var(--soft);padding:30px 36px 34px}
   .inset .lbl{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
-  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .three .nm{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--green);line-height:1.2}
-  .three .ds{font-size:14.5px;color:var(--muted);line-height:1.45;margin-top:3px}
+  .three{display:grid;grid-template-columns:repeat(3,1fr)}
+  .three > div{padding:4px 30px}
+  .three > div:first-child{padding-left:0}
+  .three > div:last-child{padding-right:0}
+  .three > div + div{border-left:1px solid var(--line)}
+  .three .nm{font-family:var(--serif);font-size:34px;font-weight:400;letter-spacing:.005em;color:var(--green);line-height:1.15}
+  .three .ds{font-size:14px;color:var(--muted);line-height:1.5;margin-top:10px}
   .inset .foot{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:14.5px;color:var(--muted)}
 
   .harvest{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:34px;align-items:start;margin-top:22px}
@@ -124,13 +129,18 @@
     h2{font-size:32px}
     .hero img{height:220px}
     .hero figcaption{padding:10px 24px 0}
-    .stats{grid-template-columns:1fr 1fr;margin:26px 24px 0;border-bottom:0}
-    .stats div{border-left:0;border-bottom:1px solid var(--line);padding:18px 10px}
-    .stats div:first-child{padding-left:10px}
-    .stats div:last-child{padding-right:10px}
-    .stats div:nth-child(even){border-left:1px solid var(--line)}
-    .stat-n{min-height:0;font-size:26px}
+    .stats{margin:28px 24px 0}
+    .stats > div{padding:22px 0 24px}
+    .stats > div:nth-child(odd){border-right:0}
+    .stats > div + div{border-top:1px solid var(--line)}
+    .stats > div:nth-child(-n+2){border-bottom:0}
+    .stat-n{font-size:34px}
+    .stat-l{font-size:14px;margin-top:8px}
     .cols,.three,.products,.trio,.harvest,.vids{grid-template-columns:1fr;gap:14px}
+    .three > div{padding:16px 0}
+    .three > div:first-child{padding-top:0}
+    .three > div + div{border-left:0;border-top:1px solid var(--line)}
+    .three .nm{font-size:29px}
     .trio img{height:210px}
     footer.bot{margin:36px 24px 0}
   }
@@ -158,7 +168,7 @@
     <div><div class="stat-n">907 kg</div><div class="stat-l">kwiatów jaśminu na 1,3 kg absolutu</div></div>
     <div><div class="stat-n">ok. 6 000 000</div><div class="stat-l">pojedynczych kwiatów w takiej partii</div></div>
     <div><div class="stat-n">2:30 w nocy</div><div class="stat-l">o tej porze zaczyna się dzień zbieraczek</div></div>
-    <div><div class="stat-n">ok. 6 tygodni</div><div class="stat-l">tyle trwa okno zbioru neroli:<br>od poł. marca do końca kwietnia</div></div>
+    <div><div class="stat-n">ok. 6 tygodni</div><div class="stat-l">tyle trwa okno zbioru neroli: od poł. marca do końca kwietnia</div></div>
   </div>
 
   <section class="block">
@@ -216,7 +226,7 @@
     </div>
     <div class="quote" style="margin-top:26px">
       <p><b>Pięć lat później okazało się inaczej.</b> Destylowany olejek jaśminowy jest dziś normalną pozycją w katalogu — to właśnie ta buteleczka 2,5 ml z etykietą „Pure Essential Oil”, sprzedawana z limitem jednej sztuki na zamówienie. Absolut nie zniknął, ale się przesunął: osobnej buteleczki 5 ml już nie ma w sprzedaży, został wyłącznie w Jasmine Touch, gdzie dalej powstaje przez ekstrakcję rozpuszczalnikiem, bo kwiat jest na destylację za kruchy.</p>
-      <div class="src">Stan sprawdzony 3 września 2026</div>
+      <div class="src">Stan sprawdzony 4 września 2026</div>
     </div>
 
     <div class="inset">
@@ -287,7 +297,7 @@
         <div class="shot"><img src="images/60203545-jasmine-touch.png" alt="Jasmine Touch dōTERRA 10 ml"></div>
         <div class="nm">Jasmine Touch</div>
         <div class="form">roll-on · 10 ml</div>
-        <div class="desc">Absolut jaśminowy (ekstrakcja rozpuszczalnikiem) z frakcjonowanym olejem kokosowym, do stosowania bezpośrednio na skórę.</div>
+        <div class="desc">Olejek jaśminowy z frakcjonowanym olejem kokosowym, do stosowania bezpośrednio na skórę. Według dōTERRA jest to absolut, nie destylat.</div>
         <div class="price"><span class="zl">247,75 zł</span><span class="pv">52,5 PV</span></div>
         <div class="shop-row"><a class="shop" href="https://shop.doterra.com/PL/pl_PL/shop/jasmine-touch-oil" target="_blank" rel="noopener">Karta produktu<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></div>
       </div>
@@ -301,7 +311,7 @@
         <div class="shop-row"><a class="shop" href="https://shop.doterra.com/PL/pl_PL/shop/neroli-touch-oil" target="_blank" rel="noopener">Karta produktu<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></div>
       </div>
     </div>
-    <div class="note">Ceny hurtowe brutto dla Polski, stan na 2 września 2026. Neroli w wersji nierozcieńczonej nie ma w polskiej ofercie — dostępny jest wyłącznie roll-on. Osobnej buteleczki z samym absolutem jaśminowym (5 ml) już się nie sprzedaje — absolut jest dziś dostępny wyłącznie jako Jasmine Touch.</div>
+    <div class="note">Ceny hurtowe brutto dla Polski, stan na 2 września 2026. Neroli w wersji nierozcieńczonej nie ma w polskiej ofercie — dostępny jest wyłącznie roll-on. Osobnej buteleczki z samym absolutem jaśminowym (5 ml) już się nie sprzedaje — absolut jest dziś dostępny wyłącznie jako Jasmine Touch. Zastrzeżenie: aktualna polska karta produktu Jasmine Touch (©2025) w ogóle nie podaje metody ekstrakcji. Że w kulce jest absolut, mówi wprost strona edukacyjna dōTERRA — link w stopce.</div>
   </section>
 
   <section class="block">
@@ -343,7 +353,7 @@
   <footer class="bot">
     <b>Źródło:</b> dōTERRA Europe Living Magazine (wydanie angielskie, V4), artykuł „Changing Lives one flower at a time”, s. 36–37 — pochodzenie obu surowców, opis ekstrakcji, dane o zbiorze i relacja Hele. Zdjęcia z tego samego artykułu.<br>
     <b>Filmy:</b> kanały doTERRA Canada, doTERRA Europe i dōTERRA Brasil na YouTube — linki i opis zawartości w sekcji powyżej.<br>
-    <b>Weryfikacja postaci surowca (3 września 2026):</b> karty produktu shop.doterra.com PL oraz karty informacyjne producenta (Product Information Page): <a href="https://media.doterra.com/us/en/pips/jasmine-oil.pdf" target="_blank" rel="noopener">„Jasmine, Jasminum grandiflorum 2.5 mL”</a> — metoda: destylacja parowa, i <a href="https://media.doterra.com/us/en/pips/doterra-jasmine-essential-oil.pdf" target="_blank" rel="noopener">„Jasmine (Absolute), 5 mL”</a> — metoda: absolut, dokument produktu, którego <b>już się nie sprzedaje</b>, przywołany tylko dla porównania metod. Liczba 21 000 płatków na 5 ml absolutu pochodzi ze strony edukacyjnej doTERRA Jasmine Touch.<br>
+    <b>Weryfikacja postaci surowca (3–4 września 2026):</b> karty produktu shop.doterra.com PL oraz karty informacyjne producenta (Product Information Page): <a href="https://media.doterra.com/us/en/pips/jasmine-oil.pdf" target="_blank" rel="noopener">„Jasmine, Jasminum grandiflorum 2.5 mL”</a> — metoda: destylacja parowa, i <a href="https://media.doterra.com/us/en/pips/doterra-jasmine-essential-oil.pdf" target="_blank" rel="noopener">„Jasmine (Absolute), 5 mL”</a> — metoda: absolut, dokument produktu, którego <b>już się nie sprzedaje</b>, przywołany tylko dla porównania metod. Postać surowca w kulce: <a href="https://www.doterra.com/US/en/doterra-jasmine-touch-education" target="_blank" rel="noopener">strona edukacyjna dōTERRA Jasmine Touch</a> — „Jasmine Touch continues providing our traditional, pure Jasmine absolute”, zdanie napisane już po opanowaniu destylacji, więc nie jest to nieodświeżona kopia. Stamtąd też liczba 21 000 płatków na 5 ml absolutu. Uwaga: <a href="https://media.doterra.com/pl/pl/pips/jasmine-touch-oil.pdf" target="_blank" rel="noopener">polska karta produktu Jasmine Touch (©2025)</a> nie zawiera już rubryki z metodą ekstrakcji, więc sama w sobie tego nie potwierdza.<br>
     <b>Ceny i rendery produktów:</b> baza aroma-pricing (migawka sklepu shop.doterra.com PL z 2 września 2026).
   </footer>
 
