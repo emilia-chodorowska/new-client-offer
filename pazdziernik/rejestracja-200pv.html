@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Październik 2026 · Rejestracja od 200 PV</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#e8e5de;font-family:'Lato',sans-serif;color:#24241f;
+       display:flex;align-items:flex-start;justify-content:center;padding:40px 20px;
+       -webkit-font-smoothing:antialiased}
+  .card{position:relative;width:1080px;height:1080px;background:#fff;overflow:hidden;
+        display:flex;flex-direction:column;justify-content:center;
+        padding:64px 70px 150px;box-shadow:0 18px 60px rgba(36,36,31,.18)}
+  body.shot{background:transparent;padding:0}
+  body.shot .card{box-shadow:none}
+  .leaves{position:absolute;top:-18px;left:-30px;width:330px;opacity:.2;pointer-events:none}
+
+  header{text-align:center;position:relative;z-index:2}
+  header img.logo{height:26px;display:block;margin:0 auto 14px}
+  .data{font-size:14px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#8a897f;margin-bottom:20px}
+  .warunek{font-family:'Playfair Display',serif;font-size:54px;font-weight:700;line-height:1.06;letter-spacing:-.5px}
+  .termin{font-size:19.5px;color:#69685f;margin-top:9px}
+
+  .grupy{display:grid;grid-template-columns:1fr 1fr;margin-top:40px;position:relative;z-index:2}
+  .grupa{display:flex;flex-direction:column;align-items:center;padding:0 18px}
+  .grupa + .grupa{border-left:1px solid #ebe9e4}
+  .grupa .et{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#69685f}
+  .grupa .kw{font-family:'Playfair Display',serif;font-size:21px;font-weight:600;color:#69685f;margin-top:4px}
+  .para{display:grid;grid-template-columns:1fr 1fr;width:100%;margin-top:18px}
+  .produkt{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .foto{position:relative;height:240px;display:flex;align-items:center;justify-content:center;width:100%}
+  .foto::before{content:'';position:absolute;width:176px;height:176px;border-radius:50%;background:#eaf0e7}
+  .foto img{position:relative;max-height:240px;max-width:78%}
+  .produkt .nazwa{font-family:'Playfair Display',serif;font-size:23px;font-weight:600;margin-top:16px;line-height:1.2}
+  .produkt .opis{font-size:16px;color:#69685f;margin-top:5px}
+
+  .wartosc{margin:34px auto 0;display:inline-flex;align-items:baseline;gap:10px;
+           padding:11px 24px;border-radius:999px;background:#eef2ea;position:relative;z-index:2}
+  .wartosc .et{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#55704a}
+  .wartosc .kw{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#3f5637}
+  .srodek{text-align:center}
+
+  .stopka{position:absolute;left:84px;right:84px;bottom:58px;z-index:2;border-top:1px solid #ebe9e4;padding-top:15px;
+          font-size:13.5px;color:#69685f;display:flex;justify-content:space-between;gap:20px}
+</style>
+</head>
+<body>
+<div class="card">
+  <img class="leaves" src="images/liscie-gora.png" alt="">
+
+  <header>
+    <img class="logo" src="images/doterralogo.png" alt="dōTERRA">
+    <div class="data">Październik 2026</div>
+    <div class="warunek">Rejestracja od 200 PV</div>
+    <div class="termin">zamówienie rejestracyjne złożone od 1 do 5 października 2026</div>
+  </header>
+
+  <section class="grupy">
+    <div class="grupa">
+      <div class="et">Promocja doTERRA</div>
+      <div class="kw">ok. 410 zł</div>
+      <div class="para">
+        <div class="produkt">
+          <div class="foto"><img src="images/copaiba.png" alt=""></div>
+          <div class="nazwa">Copaiba</div>
+          <div class="opis">olejek · 15 ml</div>
+        </div>
+        <div class="produkt">
+          <div class="foto"><img src="images/60223856-deep-blue-rub.png" alt=""></div>
+          <div class="nazwa">Maść Deep Blue</div>
+          <div class="opis">120 ml</div>
+        </div>
+      </div>
+    </div>
+    <div class="grupa">
+      <div class="et">Klub Diamentowy</div>
+      <div class="kw">ok. 210 zł</div>
+      <div class="para">
+        <div class="produkt">
+          <div class="foto"><img src="images/wild-orange.png" alt=""></div>
+          <div class="nazwa">Wild Orange</div>
+          <div class="opis">olejek · 15 ml</div>
+        </div>
+        <div class="produkt">
+          <div class="foto"><img src="images/balance.png" alt=""></div>
+          <div class="nazwa">Balance</div>
+          <div class="opis">mieszanka · 15 ml</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="srodek"><div class="wartosc"><span class="et">4 produkty gratis · wartość</span><span class="kw">ok. 630 zł</span></div></div>
+
+  <div class="stopka">
+    <span>Emilia Chodorowska · doTERRA Wellness Advocate</span>
+    <span>Wild Orange i Balance: rejestracja przez uczestnika Klubu Diamentowego</span>
+  </div>
+</div>
+<script>if(location.hash==='#shot')document.body.classList.add('shot');</script>
+</body>
+</html>
