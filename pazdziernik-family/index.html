@@ -52,6 +52,21 @@
             right: -2rem;
         }
 
+        .strike-row {
+            position: relative;
+            color: #6b7280;
+        }
+        .strike-row::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #6b7280;
+            z-index: 10;
+        }
+
         @media (max-width: 768px) {
             .price-bubble {
                 width: 8rem !important;
@@ -59,6 +74,18 @@
                 font-size: 1.25rem !important;
                 top: -1.5rem;
                 right: -1.5rem;
+            }
+
+            #calculation-table th,
+            #calculation-table td {
+                padding: 0.375rem 0.15rem !important;
+                font-size: 0.7rem;
+            }
+
+            #calculation-table thead th {
+                font-size: 0.6rem;
+                line-height: 1.05;
+                word-wrap: break-word;
             }
         }
 
@@ -125,17 +152,17 @@
                     <div class="bg-white p-4 md:p-6 rounded-lg w-full h-fit border-2 border-[#a7c5a9]">
                         <h3 class="text-center text-xl md:text-2xl font-semibold mb-4" style="color: var(--text);">Zestaw zawiera:</h3>
                         <p class="text-sm mb-4 text-center" style="color: var(--text-muted);">10 olejków eterycznych w buteleczkach 5 ml</p>
-                        <ul class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-2 text-base md:text-lg" style="color: var(--text-secondary);">
-                            <li>Lavender</li>
-                            <li>Lemon</li>
-                            <li>Peppermint</li>
-                            <li>Frankincense</li>
-                            <li>Tea Tree</li>
-                            <li>Oregano</li>
-                            <li>Deep Blue™</li>
-                            <li>Air™</li>
-                            <li>ZenGest™</li>
-                            <li>On Guard™</li>
+                        <ul id="kit-list" class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-2 text-base md:text-lg" style="color: var(--text-secondary);">
+                            <li data-product-name="Lavender">Lavender</li>
+                            <li data-product-name="Lemon">Lemon</li>
+                            <li data-product-name="Peppermint">Peppermint</li>
+                            <li data-product-name="Frankincense">Frankincense</li>
+                            <li data-product-name="Tea Tree">Tea Tree</li>
+                            <li data-product-name="Oregano">Oregano</li>
+                            <li data-product-name="Deep Blue™">Deep Blue™</li>
+                            <li data-product-name="Air™">Air™</li>
+                            <li data-product-name="ZenGest™">ZenGest™</li>
+                            <li data-product-name="On Guard™">On Guard™</li>
                         </ul>
                     </div>
                 </div>
@@ -156,6 +183,140 @@
                 </div>
             </div>
 
+            <div id="table-section-container" class="p-2 mt-8">
+                <h2 class="text-2xl md:text-3xl font-semibold text-center mb-6" style="color: var(--text);">Szczegółowa kalkulacja</h2>
+                <div>
+                    <div class="overflow-x-auto">
+                        <table id="calculation-table" class="min-w-full bg-white border border-gray-200 rounded-lg shadow">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="py-3 px-2 border-b border-r text-center align-middle w-12 strike-column"></th>
+                                    <th class="py-3 px-4 border-b text-left text-sm font-semibold text-slate-600">PRODUKT</th>
+                                    <th class="py-3 px-4 border-b text-left text-sm font-semibold text-slate-600 strike-column">NOTATKA</th>
+                                    <th class="py-3 px-4 border-b text-right text-sm font-semibold text-slate-600">POZA ZESTAWEM (PLN)</th>
+                                    <th class="py-3 px-4 border-b text-right text-sm font-semibold text-slate-600">W ZESTAWIE (PLN)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-slate-700">
+                                <tr data-product-name="Lavender">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Lavender">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Lavender</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">56,08</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">52,00</td>
+                                </tr>
+                                <tr data-product-name="Lemon">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Lemon">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Lemon</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">27,33</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">25,34</td>
+                                </tr>
+                                <tr data-product-name="Peppermint">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Peppermint">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Peppermint</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">46,58</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">43,19</td>
+                                </tr>
+                                <tr data-product-name="Frankincense">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Frankincense">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Frankincense</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">144,75</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">134,22</td>
+                                </tr>
+                                <tr data-product-name="Tea Tree">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Tea Tree">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Tea Tree</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">44,33</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">41,11</td>
+                                </tr>
+                                <tr data-product-name="Oregano">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Oregano">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Oregano</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">54,17</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">50,23</td>
+                                </tr>
+                                <tr data-product-name="Deep Blue™">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Deep Blue™">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Deep Blue™</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">200,00</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">185,45</td>
+                                </tr>
+                                <tr data-product-name="Air™">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Air™">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Air™</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">54,17</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">50,23</td>
+                                </tr>
+                                <tr data-product-name="ZenGest™">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="ZenGest™">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">ZenGest™</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">65,17</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">60,43</td>
+                                </tr>
+                                <tr data-product-name="On Guard™">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="On Guard™">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">On Guard™</td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">68,58</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">63,59</td>
+                                </tr>
+                                <tr data-product-name="Wild Orange">
+                                    <td class="py-1 px-2 border-b border-r text-center align-middle strike-column">
+                                        <input type="checkbox" class="strike-toggle h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" data-product-name="Wild Orange">
+                                    </td>
+                                    <td class="py-3 px-4 border-b">Wild Orange <span class="text-xs font-semibold" style="color: var(--green);">gratis</span></td>
+                                    <td class="py-1 px-2 border-b align-middle strike-column"><input type="text" class="w-full bg-gray-50 border-gray-300 rounded shadow-sm text-sm p-1 focus:ring-green-500 focus:border-green-500"></td>
+                                    <td class="py-3 px-4 border-b text-right">76,25</td>
+                                    <td class="py-3 px-4 border-b text-right font-semibold">70,71</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="bg-gray-100 text-slate-800">
+                                    <td id="footer-sum-cell" class="py-4 px-4 font-bold" colspan="3">Suma</td>
+                                    <td class="py-4 px-4 text-right font-normal">837,41</td>
+                                    <td class="py-4 px-4 text-right font-bold">776,50</td>
+                                </tr>
+                                <tr id="strike-sum-row" class="bg-gray-200 text-slate-800">
+                                    <td id="footer-struck-sum-cell" class="py-3 px-4 font-semibold" colspan="3">Suma przekreślonych</td>
+                                    <td id="struck-sum-poza-cell" class="py-3 px-4 text-right font-semibold">0,00</td>
+                                    <td id="struck-sum-w-zestawie-cell" class="py-3 px-4 text-right font-semibold">0,00</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <p class="text-xs mt-3 text-center" style="color: var(--text-muted);">Ceny poza zestawem: cena hurtowa butelki 15 ml podzielona przez 3 (Deep Blue™ – cena butelki 5 ml, Wild Orange – cena butelki 15 ml).</p>
+                </div>
+            </div>
+
+
         </main>
 
         <footer class="mt-4 pt-6 text-center text-xs relative z-10" style="border-top: 1px solid var(--border); color: var(--text-muted);">
@@ -163,6 +324,88 @@
         </footer>
 
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const isTeamMode = window.location.search.includes('team=true');
+
+            const table = document.getElementById('calculation-table');
+            const allCheckboxes = table.querySelectorAll('.strike-toggle');
+
+            function toggleStrike(productName, shouldStrike) {
+                const tableRow = document.querySelector(`#calculation-table tr[data-product-name="${productName}"]`);
+                const listItem = document.querySelector(`#kit-list li[data-product-name="${productName}"]`);
+
+                if (tableRow) {
+                    tableRow.classList.toggle('strike-row', shouldStrike);
+                }
+
+                if (listItem) {
+                    listItem.classList.toggle('line-through', shouldStrike);
+                    listItem.classList.toggle('text-gray-500', shouldStrike);
+                }
+            }
+
+            function updateStruckSum() {
+                let totalPoza = 0;
+                let totalWZestawie = 0;
+                const sumPozaCell = document.getElementById('struck-sum-poza-cell');
+                const sumWZestawieCell = document.getElementById('struck-sum-w-zestawie-cell');
+
+                allCheckboxes.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        const row = document.querySelector(`tr[data-product-name="${checkbox.dataset.productName}"]`);
+                        if (row) {
+                            const pozaPriceText = row.cells[3].textContent;
+                            const wZestawiePriceText = row.cells[4].textContent;
+                            const pozaVal = parseFloat(pozaPriceText.replace(/[^0-9,.]/g, '').replace(',', '.'));
+                            const wZestawieVal = parseFloat(wZestawiePriceText.replace(/[^0-9,.]/g, '').replace(',', '.'));
+                            if (!isNaN(pozaVal)) totalPoza += pozaVal;
+                            if (!isNaN(wZestawieVal)) totalWZestawie += wZestawieVal;
+                        }
+                    }
+                });
+
+                if (sumPozaCell && sumWZestawieCell) {
+                    sumPozaCell.textContent = totalPoza.toFixed(2).replace('.', ',');
+                    sumWZestawieCell.textContent = totalWZestawie.toFixed(2).replace('.', ',');
+                }
+            }
+
+            function initializeStriking() {
+                const strikeColumns = document.querySelectorAll('.strike-column');
+                const footerSumCell = document.getElementById('footer-sum-cell');
+                const footerStruckSumCell = document.getElementById('footer-struck-sum-cell');
+                const strikeSumRow = document.getElementById('strike-sum-row');
+
+                if (isTeamMode) {
+                    strikeColumns.forEach(col => col.classList.remove('hidden'));
+                    strikeSumRow.classList.remove('hidden');
+                    footerSumCell.setAttribute('colspan', '3');
+                    footerStruckSumCell.setAttribute('colspan', '3');
+
+                    allCheckboxes.forEach(checkbox => {
+                        checkbox.disabled = false;
+                    });
+                } else {
+                    strikeColumns.forEach(col => col.classList.add('hidden'));
+                    strikeSumRow.classList.add('hidden');
+                    footerSumCell.setAttribute('colspan', '1');
+                    footerStruckSumCell.setAttribute('colspan', '1');
+                }
+            }
+
+            allCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', (event) => {
+                    toggleStrike(event.target.dataset.productName, event.target.checked);
+                    updateStruckSum();
+                });
+            });
+
+            initializeStriking();
+            updateStruckSum();
+        });
+    </script>
 
 </body>
 </html>
