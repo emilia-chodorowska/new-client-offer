@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Warianty – oferta listopad</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23FBFAF4' stroke='%235B6147' stroke-width='8'/%3E%3Crect x='26' y='44' width='48' height='12' rx='6' fill='%23EEF0E6'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--s100:#f5f4f1;--s200:#ebe9e4;--s400:#70706c;--s800:#151513;--purple:#6d5bd0}
+body{margin:0;background:#fff;font-family:Inter,sans-serif;color:var(--s800)}
+.wrap{max-width:var(--maxw,1180px);margin:0 auto;padding:28px 20px}
+body[data-wide="1"] .wrap{max-width:none;padding:28px 40px}
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:22px}
+h1{font-size:28px;font-weight:600;margin:0 0 6px}.sub{font-size:13.5px;color:var(--s400);margin:0}
+.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--s200);background:#fff;border-radius:999px;padding:7px 14px;font:500 13px Inter;cursor:pointer;color:var(--s800);text-decoration:none}
+.btn:hover{background:var(--s100)}.btn svg{width:15px;height:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(520px,1fr));gap:18px}
+.card{border:1px solid var(--s200);border-radius:14px;overflow:hidden}
+.card h2{font-size:15px;font-weight:600;margin:0}.card p{font-size:13px;color:var(--s400);margin:3px 0 0}
+.head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--s200)}
+.frame{position:relative;height:var(--h,700px);overflow:hidden}
+.frame iframe{border:0;width:1280px;height:calc(var(--h,700px) / var(--k));transform:scale(var(--k));transform-origin:0 0;position:absolute;top:0;left:0}
+</style></head><body><div class="wrap">
+<header><div><h1>Warianty strony oferty · listopad</h1><p class="sub">Ta sama treść, cztery układy w stylu podglądu linku. Białe tło we wszystkich.</p></div>
+<button class="btn" id="wide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg><span>Szeroki widok</span></button></header>
+<div class="grid" id="g"></div></div>
+<script>
+var V=[['a','A · ramki','Cienkie oliwkowe ramki, cena w bąblu, treść w Jost'],['b','B · kość słoniowa','Karty na tle kości słoniowej bez ramek'],['c','C · Inter + szałwia','Nagłówki Cormorant, treść i tabela w Inter, zieleń szałwiowa'],['d','D · cena pod tytułem','Bez bąbla, cena pod nagłówkiem, zdjęcie bez ramki']];
+var ext='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>';
+var g=document.getElementById('g');
+V.forEach(function(v){var c=document.createElement('div');c.className='card';c.innerHTML='<div class="head"><div><h2>'+v[1]+'</h2><p>'+v[2]+'</p></div><a class="btn" target="_blank" href="podglad-em.html?v='+v[0]+'">Otwórz '+ext+'</a></div><div class="frame"><iframe loading="lazy" src="podglad-em.html?v='+v[0]+'"></iframe></div>';g.appendChild(c)});
+function fit(){document.querySelectorAll('.frame').forEach(function(f){f.style.setProperty('--k',f.clientWidth/1280)})}
+addEventListener('resize',fit);fit();
+var b=document.getElementById('wide');function set(w){document.body.dataset.wide=w?'1':'';b.querySelector('span').textContent=w?'Zwykła szerokość':'Szeroki widok';try{localStorage.setItem('warianty-wide',w?'1':'')}catch(e){}setTimeout(fit,0)}
+try{set(localStorage.getItem('warianty-wide')==='1')}catch(e){set(false)}
+b.onclick=function(){set(document.body.dataset.wide!=='1')};
+</script></body></html>
