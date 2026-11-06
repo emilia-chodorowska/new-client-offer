@@ -109,7 +109,50 @@
             }
         }
     </style>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ===== styl em.naturalnie (jak podgląd linku) ===== */
+:root{--text:#474C37;--text-secondary:#686B62;--text-muted:#8A8C82;--olive:#5B6147;--olive-soft:#EEF0E6;--line:#E6E8DE;--green:#6f9285}
+body{background:#fff!important;font-family:'Jost',sans-serif!important;color:var(--text)}
+body>.container{box-shadow:none!important;background:#fff!important}
+img[alt="Dekoracyjne liście"]{display:none}
+header img{width:7.5rem!important;opacity:.85;margin-bottom:1.25rem}
+.em-pill{display:inline-block;font:500 .8rem 'Jost',sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:.35rem 1rem;border-radius:99px;background:var(--olive-soft);color:var(--olive);margin-bottom:.9rem}
+h1,h2,h3,.price-bubble{font-variant-numeric:lining-nums}
+h1,h2,h3{font-family:'Cormorant Garamond',serif!important;font-weight:500!important;color:var(--text)!important}
+header h1{font-size:clamp(2.2rem,5vw,3.4rem)!important;text-transform:uppercase;letter-spacing:.05em;line-height:1.1}
+header p{font-family:'Jost',sans-serif;font-weight:300!important;color:var(--text-secondary)!important}
+#table-section-container h2{text-transform:uppercase;letter-spacing:.05em}
+.border-\[\#a7c5a9\]{border:1px solid var(--line)!important;border-radius:14px!important}
+.border-\[\#a7c5a9\] h3{font-size:1.75rem!important}
+.border-\[\#a7c5a9\] h2{font-size:1.65rem!important;line-height:1.25}
+.shadow-inner{background:#fff!important;box-shadow:none!important;border-radius:14px!important}
+.shadow-inner img{box-shadow:none!important}
+.price-bubble{background:var(--olive-soft)!important;color:var(--text)!important;box-shadow:none!important;font-family:'Cormorant Garamond',serif!important;font-weight:500!important;font-size:1.9rem!important}
+#calculation-table{box-shadow:none!important;border-color:var(--line)!important;border-radius:14px;overflow:hidden;color:var(--text)}
+#calculation-table thead{background:#fff!important}
+#calculation-table th{color:var(--olive)!important;font-weight:500!important;letter-spacing:.08em}
+#calculation-table td,#calculation-table th{border-color:var(--line)!important}
+#calculation-table tbody{color:var(--text)!important}
+#calculation-table tfoot{background:#FBFAF4}
+#calculation-table tfoot tr,#calculation-table tfoot td{background:transparent!important}
+footer{color:var(--text-muted)!important}
+@media (min-width:769px){
+  body{background:#F8F7F2!important}
+  body>.container{background:#fff!important;border-radius:0;box-shadow:0 1px 2px rgba(71,76,55,.05),0 10px 36px rgba(71,76,55,.07)!important}
+}
+@media (max-width:768px){
+  .price-bubble{right:.25rem!important;top:-1rem!important;width:7rem!important;height:7rem!important;font-size:1.45rem!important}
+  #kit-list{grid-template-columns:repeat(2,minmax(0,1fr))!important;column-gap:.9rem!important;font-size:.95rem!important}
+  #kit-list li{white-space:nowrap}
+  .border-\[\#a7c5a9\]{padding:1rem .9rem!important}
+  .border-\[\#a7c5a9\] h3{font-size:1.5rem!important;margin-bottom:.75rem!important}
+  .border-\[\#a7c5a9\] h2{font-size:1.4rem!important}
+  #calculation-table td{font-size:.78rem!important}
+}
+</style>
 </head>
+
 <body class="flex items-center justify-center min-h-screen py-8">
 
     <div class="relative container max-w-5xl my-4 p-4 sm:p-6 md:p-8 bg-white shadow-xl">
@@ -127,8 +170,9 @@
                     alt="dōTERRA Logo"
                     class="mx-auto mb-6 w-48 md:w-56"
                  >
-                 <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-2" style="color: var(--text);">Listopad 2026</h1>
-                 <p class="text-lg md:text-xl font-light" style="color: var(--text-secondary);">Family Essentials Kit</p>
+                 <div class="em-pill">Listopad 2026</div>
+                 <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-2">Family Essentials Kit</h1>
+                 <p class="text-lg md:text-xl font-light">10 olejków eterycznych 5 ml</p>
             </div>
         </header>
 
