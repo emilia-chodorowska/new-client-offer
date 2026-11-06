@@ -194,18 +194,12 @@ html[data-v="d"] #promo-box-container{border:none!important;background:#FBFAF4!i
   #calculation-table td{font-size:.78rem!important}
 }
 
-/* tło strony oddzielone od karty oferty */
-html[data-v="a"] body{background:#F3F1EA!important}
-html[data-v="a"] #main-container{background:#fff!important;border-radius:20px;box-shadow:0 1px 2px rgba(71,76,55,.06),0 12px 40px rgba(71,76,55,.08)!important}
-@media (max-width:768px){html[data-v="a"] body{padding:10px 0}html[data-v="a"] #main-container{width:calc(100% - 20px);border-radius:16px}}
-
-@media (max-width:768px){
-  #main-content-container,#right-column-container,#promo-section-container,#table-section-container{padding-left:0!important;padding-right:0!important}
-  #kit-contents-container{padding:1rem .9rem!important}
-  #kit-list{column-gap:.9rem!important;font-size:.95rem!important}
-  #kit-list li{white-space:nowrap}
-  .price-bubble{right:.25rem!important}
+/* tło strony oddzielone od karty oferty (tylko komputer) */
+@media (min-width:769px){
+  html[data-v="a"] body{background:#F8F7F2!important}
+  html[data-v="a"] #main-container{background:#fff!important;border-radius:0;box-shadow:0 1px 2px rgba(71,76,55,.05),0 10px 36px rgba(71,76,55,.07)!important}
 }
+@media (max-width:768px){html[data-v="a"] body{background:#fff!important}html[data-v="a"] #main-container{box-shadow:none!important;border-radius:0}}
 </style>
 <script>(function(){var v=(new URLSearchParams(location.search).get('v')||'a').toLowerCase();document.documentElement.setAttribute('data-v',v)})()</script>
 </head>
